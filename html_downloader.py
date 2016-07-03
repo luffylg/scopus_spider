@@ -1,0 +1,2 @@
+class HtmlDownloader(object):
+    pass

@@ -1,0 +1,2 @@
+class HtmlOutputer(object):
+    pass
