@@ -1,8 +1,14 @@
 import re
 import requests
+from bs4 import BeautifulSoup
+
 import html_downloader
 import html_outputer
 import html_parser
+
+
+
+
 
 class SpiderMain(object):
     def __init__(self,xing,ming):
@@ -45,12 +51,21 @@ class SpiderMain(object):
         AuthorID=self.parser.GetAuthorId(s)#获取authorid
         if(AuthorID==False):
             return
+
+        else:
+            self.crawel(ses,AuthorID)
+
+    def crawel(self,ses, AuthorID):
         s2=ses.get('https://www.scopus.com/authid/detail.uri',params={'authorId':AuthorID})# 获取作者详细信息页面
         message=self.parser.GetAuthorMessage(s2)#获取详细信息
         wenxin=message[0]
         AuthorName=message[1]
         area=message[2]
-        print('文献数：'+wenxin)
+        lishi=message[4]
+        if int(wenxin)<10:#文献数少于10，直接返回
+            print('文献数为'+wenxin+'，不符合要求')
+            return
+        print('文献数：'+wenxin+' '+lishi)
         print(AuthorName)
         print(area)
         Articlelink=message[3]#获取作者所有文章页面链接
@@ -64,8 +79,146 @@ class SpiderMain(object):
             if emailnotparse!=None:
                 email=strip_email_protection(emailnotparse['href'])
                 print(email)
-                print('年份: '+nian)
+                print('年份: '+nian+'\n')
                 break
+
+class WenxianSpiderMain(object):
+    def __init__(self,wenxian):
+        self.downloader = html_downloader.HtmlDownloader()
+        self.parser = html_parser.HtmlParser()
+        self.outputer = html_outputer.HtmlOutputer()
+        self.wenxian=wenxian
+        self.wenxianparse=self.wenxian.replace(' ','+')
+        self.param={
+            'numberOfFields':'0',
+            'src':'s',
+            'clickedLink':'',
+            'edit':'',
+            'editSaveSearch':'',
+            'origin':'searchbasic',
+            'authorTab':'',
+            'affiliationTab':'',
+            'advancedTab':'',
+            'scint':'1',
+            'menu':'search',
+            'tablin':'',
+            'searchterm1':self.wenxianparse,
+            'field1':'TITLE_ABS_KEY',
+            'dateType':'Publication_Date_Type',
+            'yearFrom':'Before+1960',
+            'yearTo':'Present',
+            'loadDate':'7',
+            'documenttype':'All',
+            'subjects':'LFSC',
+            '_subjects':'on',
+            'subjects':'HLSC',
+            '_subjects':'on',
+            'subjects':'PHSC',
+            '_subjects':'on',
+            'subjects':'SOSC',
+            '_subjects':'on',
+            'st1':self.wenxianparse,
+            'st2':'',
+            'sot':'b',
+            'sdt':'b',
+            'sl':'101',
+            's':'TITLE-ABS-KEY%28'+self.wenxianparse+'%29',
+            #'sid':0D8A156F36B35369FE6B68BAAA111169.N5T5nM1aaTEF8rE6yKCR3A%3A150
+            #searchId:0D8A156F36B35369FE6B68BAAA111169.N5T5nM1aaTEF8rE6yKCR3A%3A150
+            #txGid:0D8A156F36B35369FE6B68BAAA111169.N5T5nM1aaTEF8rE6yKCR3A%3A15
+            'sort':'plf-f',
+            'originationType':'b',
+            'rr':''
+        }
+
+        self.param2={
+            'numberOfFields':'0',
+            'src':'s',
+            'clickedLink':'',
+            'edit':'',
+            'editSaveSearch':'',
+            'origin':'searchbasic',
+            'authorTab':'',
+            'affiliationTab':'',
+            'advancedTab':'',
+            'scint':'1',
+            'menu':'search',
+            'tablin':'',
+            'searchterm1':self.wenxian,
+            'field1':'TITLE_ABS_KEY',
+            'dateType':'Publication_Date_Type',
+            'yearFrom':'Before 1960',
+            'yearTo':'Present',
+            'loadDate':'7',
+            'documenttype':'All',
+            'authSubject':'LFSC',
+           '_authSubject':'on',
+           'authSubject':'HLSC',
+            '_authSubject':'on',
+            'authSubject':'PHSC',
+            '_authSubject':'on',
+            'authSubject':'SOSC',
+            '_authSubject':'on',
+            'st1':self.wenxian,
+            'st2':'',
+            'sot':'b',
+            'sdt':'b',
+            'sl':'101',
+            's':'TITLE-ABS-KEY({0})'.format(self.wenxian),
+            # sid:558EDC31DD2FC5442E4523A31F75350C.N5T5nM1aaTEF8rE6yKCR3A:70
+            # searchId:558EDC31DD2FC5442E4523A31F75350C.N5T5nM1aaTEF8rE6yKCR3A:70
+            # txGid:558EDC31DD2FC5442E4523A31F75350C.N5T5nM1aaTEF8rE6yKCR3A:7
+            'sort':'plf-f',
+            'originationType':'b',
+            'rr':''
+        }
+
+    #输入文献名称爬取
+
+    def craw(self):
+        root='https://www.scopus.com/results/results.uri'
+        ses=requests.session()#创建session
+        s=ses.get(root,params=self.param2)#搜索得到文献列表页面
+        soup = BeautifulSoup(s.text, 'html.parser')
+        span=soup.find_all('span',class_='docTitle')
+        if len(span)==0:
+            print("找不到文献")
+            return
+        elif len(span)==1:
+            link=span[0].a['href']
+        else:
+            bianhao=0
+            links=[]
+            for spans in span:
+                bianhao+=1
+                links.append(spans.a['href'])
+                biaoti=spans.a.text.strip().replace('\n','')
+                zuozhemen=spans.parent.parent.find('div',class_='dataCol3').span.text.strip().replace('\n','')
+                nian=spans.parent.parent.find('div',class_='dataCol4').span.text.strip().replace('\n','')
+                kan=spans.parent.parent.find('div',class_='dataCol5').span.a.text.strip().replace('\n','')
+                print('编号：'+str(bianhao)+' 标题：'+biaoti+' 作者：'+zuozhemen+' 年份：'+nian+' 出版刊物：'+kan)
+            link=links[int(input('输入编号：'))-1]
+        s2=ses.get(link)#进入文章页面
+        fout = open('output4.html', 'w',encoding="UTF-8")
+        fout.write(s2.text)
+        soup2 = BeautifulSoup(s2.text, 'html.parser')
+        atitles=soup2.find('div',id='authorlist').find_all('a',title='Show Author Details')
+        idlist=[]
+        spi=SpiderMain('a','b')#创建对象
+        sum=0
+        for atitle in atitles:
+            authorId=re.findall(r'authorId=\w+&',atitle['href'])[0].replace('authorId=','').replace('&','')
+            idlist.append(authorId)
+            sum+=1
+            print('第'+str(sum)+'作者')
+            spi.crawel(ses,authorId)#利用得到的authorid复用SpiderMain中的方法
+
+
+
+
+
+
+
 
 
 def seperatename(name):
@@ -88,13 +241,35 @@ def strip_email_protection(s):
     # #strip <script>
     # m = re.sub('<script.*?</script>', '', s, flags = re.DOTALL)
     return email
+def zuozhe_mode():
+    #通过输入人名查找审稿人
+    name=input("人名: ").replace(',','')
+    if name=='exit':
+        exit()
+    xing,ming=seperatename(name)
+    #ming=seperatename(name)[1]
+    obj_spider=SpiderMain(xing,ming)
+    obj_spider.craw()
+
+def wenxian_mode():
+    #通过输入文献查找审稿人
+    wenxian=input('文献标题：').strip()
+    if wenxian=='exit':
+        exit()
+    obj_spider=WenxianSpiderMain(wenxian)
+    obj_spider.craw()
 
 if __name__=="__main__":
+
     while True:
-        name=input("name: ").replace(',','')
-        if name=='exit':
+        print()
+        print('编号1为人名模式，编号2为文献模式，输入exit退出')
+        flag=input('输入编号：').strip()
+        if flag==str(1):
+            zuozhe_mode()
+        elif flag==str(2):
+            wenxian_mode()
+        elif flag=='exit':
             exit()
-        xing=seperatename(name)[0]
-        ming=seperatename(name)[1]
-        obj_spider=SpiderMain(xing,ming)
-        obj_spider.craw()
+        else:
+            print('输入不符合要求，重新输入')
