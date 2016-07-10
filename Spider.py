@@ -189,10 +189,16 @@ class WenxianSpiderMain(object):
         else:
             bianhao=0
             links=[]
+            mark=0
+            link=''
             for spans in span:
                 bianhao+=1
                 links.append(spans.a['href'])
                 biaoti=spans.a.text.strip().replace('\n','')
+                if biaoti==self.wenxian:
+                    mark=1
+                    link=spans.a['href']
+                    break
                 zuozhemen=spans.parent.parent.find('div',class_='dataCol3').span.text.strip().replace('\n','')
                 nian=spans.parent.parent.find('div',class_='dataCol4').span.text.strip().replace('\n','')
                 if spans.parent.parent.find('div',class_='dataCol5').span.a is None:
@@ -200,10 +206,11 @@ class WenxianSpiderMain(object):
                 else:
                     kan=spans.parent.parent.find('div',class_='dataCol5').span.a.text.strip().replace('\n','')
                 print('编号：'+str(bianhao)+' 标题：'+biaoti+' 作者：'+zuozhemen+' 年份：'+nian+' 出版刊物：'+kan)
-            link=links[int(input('输入编号：'))-1]
+            if mark==0:
+                link=links[int(input('输入编号：'))-1]
         s2=ses.get(link)#进入文章页面
-        fout = open('output4.html', 'w',encoding="UTF-8")
-        fout.write(s2.text)
+        #fout = open('output4.html', 'w',encoding="UTF-8")
+        #fout.write(s2.text)
         soup2 = BeautifulSoup(s2.text, 'html.parser')
         atitles=soup2.find('div',id='authorlist').find_all('a',title='Show Author Details')
         idlist=[]

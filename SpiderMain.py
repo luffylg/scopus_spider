@@ -92,9 +92,9 @@ s2=ses.get('https://www.scopus.com/authid/detail.uri',params={'authorId':authorI
 # print(s2.history)
 
 #print(s2.encoding)
-fout = open('output.html', 'w',encoding="UTF-8")
-fout.write(s2.text)
-soup2 = BeautifulSoup(open('output.html','r',encoding="UTF-8"), 'html.parser',from_encoding="UTF-8")
+#fout = open('output.html', 'w',encoding="UTF-8")
+#fout.write(s2.text)
+soup2 = BeautifulSoup(s2.text, 'html.parser')
 namesec=soup2.find_all('div',class_='nameSection')
 span2=namesec[0].find_all('div',class_='authAffilcityCounty')
 
@@ -131,9 +131,9 @@ s3=ses.get(ArticlesLink)
 #s3=ses.get(ArticlesLink,params=param3)
 #print(s3.history)
 #print(s3.url)
-fout2 = open('output2.html', 'w',encoding="UTF-8")
-fout2.write(s3.text)
-soup3=BeautifulSoup(open('output2.html','r',encoding="UTF-8"), 'html.parser',from_encoding="UTF-8")
+#fout2 = open('output2.html', 'w',encoding="UTF-8")
+#fout2.write(s3.text)
+soup3=BeautifulSoup(s3.text, 'html.parser')
 spanarticle=soup3.find_all('span',class_='docTitle')
 for article in spanarticle:
 
@@ -146,10 +146,10 @@ for article in spanarticle:
 
 
 
-    fout3 = open('output3.html', 'w',encoding="UTF-8")
-    fout3.write(s4.text)
+    #fout3 = open('output3.html', 'w',encoding="UTF-8")
+    #fout3.write(s4.text)
 
-    soup4=BeautifulSoup(open('output3.html','r',encoding="UTF-8"), 'html.parser',from_encoding="UTF-8")
+    soup4=BeautifulSoup(s4.text, 'html.parser')
 
     highlight=soup4.find_all('span',class_='ScopusTermHighlight')
 

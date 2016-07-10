@@ -35,9 +35,9 @@ class HtmlParser(object):
             return Getid(span[int(i)-1])
 
     def GetAuthorMessage(self, s2):
-        fout = open('output.html', 'w',encoding="UTF-8")
-        fout.write(s2.text)
-        soup2 = BeautifulSoup(open('output.html','r',encoding="UTF-8"), 'html.parser',from_encoding="UTF-8")
+        #fout = open('output.html', 'w',encoding="UTF-8")
+        #fout.write(s2.text)
+        soup2 = BeautifulSoup(s2.text, 'html.parser')
         namesec=soup2.find_all('div',class_='nameSection')
         span2=namesec[0].find_all('div',class_='authAffilcityCounty')
         namejihe=namesec[0].h1.text.replace(namesec[0].h1.span.text,'').replace('\n','').split(',')
@@ -51,9 +51,10 @@ class HtmlParser(object):
         return WenxinNum,name,area,ArticlesLink,lishi
 
     def GetArticles(self, s3):
-        fout2 = open('output2.html', 'w',encoding="UTF-8")
-        fout2.write(s3.text)
-        soup3=BeautifulSoup(open('output2.html','r',encoding="UTF-8"), 'html.parser',from_encoding="UTF-8")
+        #fout2 = open('output2.html', 'w',encoding="UTF-8")
+        #fout2.write(s3.text)
+        #soup3=BeautifulSoup(open('output2.html','r',encoding="UTF-8"), 'html.parser',from_encoding="UTF-8")
+        soup3=BeautifulSoup(s3.text, 'html.parser')
         spanarticle=soup3.find_all('span',class_='docTitle')
         list=[]
         for article in spanarticle:
@@ -64,9 +65,10 @@ class HtmlParser(object):
         return list
 
     def GetEmail(self, s4):
-        fout3 = open('output3.html', 'w',encoding="UTF-8")
-        fout3.write(s4.text)
-        soup4=BeautifulSoup(open('output3.html','r',encoding="UTF-8"), 'html.parser',from_encoding="UTF-8")
+        #fout3 = open('output3.html', 'w',encoding="UTF-8")
+        #fout3.write(s4.text)
+        #soup4=BeautifulSoup(open('output3.html','r',encoding="UTF-8"), 'html.parser',from_encoding="UTF-8")
+        soup4=BeautifulSoup(s4.text, 'html.parser')
         highlight=soup4.find_all('span',class_='ScopusTermHighlight')
         emailnotparse=highlight[0].parent.parent.find('a',class_='correspondenceEmail')
         return emailnotparse
