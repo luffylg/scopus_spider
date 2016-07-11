@@ -70,5 +70,10 @@ class HtmlParser(object):
         #soup4=BeautifulSoup(open('output3.html','r',encoding="UTF-8"), 'html.parser',from_encoding="UTF-8")
         soup4=BeautifulSoup(s4.text, 'html.parser')
         highlight=soup4.find_all('span',class_='ScopusTermHighlight')
+        #解析名字缩写
+        a=highlight[0].text.split(',')
+        a.reverse()
+        suoxie=' '.join([i.strip() for i in a])
+        #print("缩写："+suoxie)
         emailnotparse=highlight[0].parent.parent.find('a',class_='correspondenceEmail')
-        return emailnotparse
+        return emailnotparse,suoxie

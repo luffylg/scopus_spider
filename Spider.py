@@ -47,6 +47,7 @@ class SpiderMain(object):
     def craw(self):
         root='https://www.scopus.com/results/authorNamesList.uri'
         ses=requests.session()#创建session
+        #ses.proxies={'https':'http://127.0.0.1:1085'}#代理
         s=ses.get(root,params=self.param)#搜索得到作者列表页面
         AuthorID=self.parser.GetAuthorId(s)#获取authorid
         if(AuthorID==False):
@@ -65,9 +66,9 @@ class SpiderMain(object):
         if int(wenxin)<10:#文献数少于10，直接返回
             print('文献数为'+wenxin+'，不符合要求')
             return
-        print('文献数：'+wenxin+' '+lishi)
-        print(AuthorName)
-        print(area)
+        # print('文献数：'+wenxin+' '+lishi)
+        # print(AuthorName)
+        # print(area)
         Articlelink=message[3]#获取作者所有文章页面链接
         s3=ses.get(Articlelink)#获取作者所有文章页面
         Articles=self.parser.GetArticles(s3)#获得所有文章链接及年份列表
@@ -75,12 +76,19 @@ class SpiderMain(object):
             link=lists[0]
             nian=lists[1]
             s4=ses.get(link)#获取文章详细信息页面
-            emailnotparse=self.parser.GetEmail(s4)#得到加密的邮件地址
+            emailnotparse,suoxie=self.parser.GetEmail(s4)#得到加密的邮件地址
             if emailnotparse!=None:
+                print('文献数：'+wenxin+' '+lishi)
+                print(AuthorName)
+                print("缩写："+suoxie)
+                print(area)
                 email=strip_email_protection(emailnotparse['href'])
                 print(email)
+                #print('<a href=\''+email+'\'>'+email+'></a>')
                 print('年份: '+nian+'\n')
                 break
+            else:
+                print("没找到邮箱")
 
 class WenxianSpiderMain(object):
     def __init__(self,wenxian):
@@ -178,6 +186,7 @@ class WenxianSpiderMain(object):
     def craw(self):
         root='https://www.scopus.com/results/results.uri'
         ses=requests.session()#创建session
+        #ses.proxies={'https':'http://127.0.0.1:1085'}
         s=ses.get(root,params=self.param2)#搜索得到文献列表页面
         soup = BeautifulSoup(s.text, 'html.parser')
         span=soup.find_all('span',class_='docTitle')
@@ -253,7 +262,10 @@ def strip_email_protection(s):
     return email
 def zuozhe_mode():
     #通过输入人名查找审稿人
-    name=input("人名: ").replace(',','')
+    #形如'hong, weirong'姓在前，不带逗号的姓在后
+    namelist=input("人名: ").split(',')
+    namelist.reverse()
+    name=' '.join([i.strip() for i in namelist])
     if name=='exit':
         exit()
     xing,ming=seperatename(name)
