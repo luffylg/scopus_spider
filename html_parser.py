@@ -35,15 +35,17 @@ class HtmlParser(object):
             return Getid(span[int(i)-1])
 
     def GetAuthorMessage(self, s2):
-        #fout = open('output.html', 'w',encoding="UTF-8")
-        #fout.write(s2.text)
-        soup2 = BeautifulSoup(s2.text, 'html.parser')
+        fout = open('output.html', 'w',encoding="UTF-8")
+        fout.write(s2.text)
+        #soup2 = BeautifulSoup(s2.text, 'html.parser')
+        soup2=BeautifulSoup(open('output.html','r',encoding="UTF-8"),'html.parser')
         namesec=soup2.find_all('div',class_='nameSection')
         span2=namesec[0].find_all('div',class_='authAffilcityCounty')
         namejihe=namesec[0].h1.text.replace(namesec[0].h1.span.text,'').replace('\n','').split(',')
         name=namejihe[-1].strip()+' '+namejihe[0]
         WenxinNum=soup2.find('a',id='docCntLnk').text.strip()
-        area=str(span2[0].string).strip().replace('\n',' ')
+        area=str(span2[0].text).strip().replace('\n',' ')
+
 
         lishi=soup2.find('div',class_='hisPubyear').text.replace('\n','').strip()
 

@@ -86,9 +86,8 @@ class SpiderMain(object):
                 print(email)
                 #print('<a href=\''+email+'\'>'+email+'></a>')
                 print('年份: '+nian+'\n')
-                break
-            else:
-                print("没找到邮箱")
+                return
+        print("没找到邮箱")
 
 class WenxianSpiderMain(object):
     def __init__(self,wenxian):
@@ -204,7 +203,7 @@ class WenxianSpiderMain(object):
                 bianhao+=1
                 links.append(spans.a['href'])
                 biaoti=spans.a.text.strip().replace('\n','')
-                if biaoti==self.wenxian:
+                if biaoti.lower()==self.wenxian.lower():
                     mark=1
                     link=spans.a['href']
                     break
