@@ -24,10 +24,11 @@
       <file leaf-file-name="Spider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5056391">
-              <caret line="221" column="53" selection-start-line="221" selection-start-column="53" selection-end-line="221" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.39514732">
+              <caret line="203" column="45" selection-start-line="203" selection-start-column="45" selection-end-line="203" selection-end-column="45" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#155#3041#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -37,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/html_parser.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="69" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
+              <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -48,7 +49,7 @@
       <file leaf-file-name="output.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/output.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.9411764">
+            <state vertical-scroll-proportion="0.0">
               <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
               <folding />
             </state>
@@ -104,16 +105,16 @@
         <option value="$PROJECT_DIR$/html_outputer.py" />
         <option value="$PROJECT_DIR$/output.html" />
         <option value="$PROJECT_DIR$/SpiderMain.py" />
-        <option value="$PROJECT_DIR$/Spider.py" />
         <option value="$PROJECT_DIR$/html_parser.py" />
+        <option value="$PROJECT_DIR$/Spider.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="1298" />
-    <option name="height" value="994" />
+    <option name="width" value="1376" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -140,8 +141,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -165,23 +166,6 @@
     </panes>
   </component>
   <component name="RunManager" selected="Python.Spider">
-    <configuration default="false" name="SpiderMain" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ScopusSpider" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SpiderMain.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Spider" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -199,51 +183,68 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests in ScopusSpider" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ScopusSpider" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
-      <option name="TEST_TYPE" value="TEST_FOLDER" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in ScopusSpider (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ScopusSpider" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
-      <option name="TEST_TYPE" value="TEST_FOLDER" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Unittests in ScopusSpider (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ScopusSpider" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in ScopusSpider (3)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ScopusSpider" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="html_parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ScopusSpider" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/html_parser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in ScopusSpider" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -388,19 +389,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.SpiderMain" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Spider" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider (2)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Spider" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider (2)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider (3)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.html_parser" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.Spider" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider" />
-        <item index="4" class="java.lang.String" itemvalue="Python.SpiderMain" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider" />
+        <item index="2" class="java.lang.String" itemvalue="Python.html_parser" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider (3)" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in ScopusSpider (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -421,34 +422,49 @@
     <history-entry file="Unittests_in_ScopusSpider - 2016.07.06 at 09h 51m 09s.xml">
       <configuration name="Unittests in ScopusSpider" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_ScopusSpider - 2016.07.20 at 09h 45m 24s.xml">
+      <configuration name="Unittests in ScopusSpider" configurationId="tests" />
+    </history-entry>
     <history-entry file="Unittests_in_ScopusSpider_(1) - 2016.07.09 at 10h 10m 38s.xml">
       <configuration name="Unittests in ScopusSpider (1)" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_ScopusSpider_(2) - 2016.07.11 at 14h 15m 17s.xml">
       <configuration name="Unittests in ScopusSpider (2)" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_ScopusSpider_(3) - 2016.07.16 at 14h 09m 46s.xml">
+      <configuration name="Unittests in ScopusSpider (3)" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1298" height="994" extended-state="6" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1376" height="738" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980047" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21898356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3245509" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -473,6 +489,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#155#3041#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -517,6 +534,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#155#3041#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -561,6 +579,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#155#3041#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -605,6 +624,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#155#3041#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -649,6 +669,7 @@
           <caret line="185" column="18" selection-start-line="185" selection-start-column="18" selection-end-line="185" selection-end-column="18" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#155#3041#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -685,6 +706,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#155#3041#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -721,6 +743,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#155#3041#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -757,6 +780,7 @@
           <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#155#3041#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -793,6 +817,7 @@
           <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#155#3041#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -829,6 +854,7 @@
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#155#3041#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -892,7 +918,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9411764">
+        <state vertical-scroll-proportion="0.0">
           <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
           <folding />
         </state>
@@ -901,7 +927,7 @@
     <entry file="file://$PROJECT_DIR$/html_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="69" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
+          <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -910,10 +936,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5056391">
-          <caret line="221" column="53" selection-start-line="221" selection-start-column="53" selection-end-line="221" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.39514732">
+          <caret line="203" column="45" selection-start-line="203" selection-start-column="45" selection-end-line="203" selection-end-column="45" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#155#3041#0" expanded="false" />
           </folding>
         </state>
       </provider>

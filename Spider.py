@@ -203,7 +203,9 @@ class WenxianSpiderMain(object):
                 bianhao+=1
                 links.append(spans.a['href'])
                 biaoti=spans.a.text.strip().replace('\n','')
-                if biaoti.lower()==self.wenxian.lower():
+
+                #替换掉可能影响判断的字符
+                if biaoti.lower().replace(' ','').replace('.','').replace(',','').replace('-','')==self.wenxian.lower().replace(' ','').replace('.','').replace(',','').replace('-',''):
                     mark=1
                     link=spans.a['href']
                     break

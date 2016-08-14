@@ -8,12 +8,12 @@
 <META NAME= "robots" CONTENT = "NOARCHIVE, NOFOLLOW, NOINDEX">
 <META NAME="description" CONTENT="Elsevier’s Scopus, the largest abstract and citation database of peer-reviewed literature. Search and access research from the science, technology, medicine, social sciences and arts and humanities fields.">
 <script>/*13012016*/(function() {var protocol = ('https:' == document.location.protocol ? 'https://' : 'http://');var scriptTag = document.createElement('script');scriptTag.type = 'text/javascript';scriptTag.async = true;scriptTag.src = protocol + 'cdn.optimizely.com/js/277918141.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(scriptTag, s);})();function optimizelyTimeout() {window.optimizely = window.optimizely|| [];if (!window.optimizely.data) {window.optimizely.push("timeout");}}setTimeout(optimizelyTimeout, 1000);</script>
-<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-963.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script><style type="text/css">
+<style type="text/css">
 .jsEnabled {display:none !important;}
 </style>
 <link rel="SHORTCUT ICON" href="/static/images/favicon.ico?ver=1.0">
-<link rel="stylesheet" type="text/css" media="all" href="/gzip_1306455755/bundles/AuthorDetails.css" />
-<link rel="stylesheet" type="text/css" media="all" href="/gzip_N205073825/bundles/ScopusLayout.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/gzip_129259563/bundles/AuthorDetails.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/gzip_N978641128/bundles/ScopusLayout.css" />
 <script type="text/javascript" src="//acw.elsevier.com/SSOCore/jawr_loader.js"></script>
 <script type="text/javascript" src="/gzip_1306601447/bundles/jquery.js" ></script>
 <script type="text/javascript">
@@ -35,15 +35,15 @@ writeJavaScriptCookie();
 var isPreviewPage = false;
 </script>
 <title>
-Scopus - Author details (Lesuer, Donald R.)
+Scopus - Author details (Mahmud, Abdullah Saad)
 </title>
-<script type="text/javascript" src="/gzip_953399778/bundles/SiteCatalystTop.js" ></script>
+<script type="text/javascript" src="/gzip_N490350772/bundles/SiteCatalystTop.js" ></script>
 <script type="text/javascript">
 var pageData={
 page	: {},
 visitor	: {}
 }
-pageDataUtil.loadPageDataObject("en","prod","1553337","(1553337,U|75809,D|53666,A|5,P|1,PL)(SCOPUS,CON|d9b108b6e28e5514a0ac2f1672ae1d7eebead2a-hYR,SSO|ANON_IP,ACCESS_TYPE)",
+pageDataUtil.loadPageDataObject("en_US","","1553337","(1553337,U|75809,D|53666,A|5,P|1,PL)(SCOPUS,CON|11b39abf12966516580f6a3c9f60b150190f53,SSO|ANON_IP,ACCESS_TYPE)",
 "ONLINE_REGISTERED","53666","", "Zhejiang University");
 </script>
 <script src="//assets.adobedtm.com/376c5346e33126fdb6b2dbac81e307cbacfd7935/satelliteLib-c74074f9c1cbd68a79f7ff7103e0cdc14b7e5f41.js"></script>
@@ -96,7 +96,7 @@ class="pointer cibCloseButton">&nbsp;</span>
 </div>
 </div>
 <a name="top" id="top"></a>
-<input type="hidden" id="txGid" value="29A9008E53E8A34122569B353D2FFD4A.zQKnzAySRvJOZYcdfIziQ:2"/>
+<input type="hidden" id="txGid" value="1FC83849EB5687E2537F0BC371893524.FZg2ODcJC9ArCe8WOZPvA:7"/>
 <div id="header" class="zoomFix" title="Main Page Header">
 <script>var prs = {rt: function(label,ts) { this[label]=(ts||ts==0?ts:new Date().getTime());}};	</script>
 <div id="scopusSciverseMasthead">
@@ -231,9 +231,9 @@ class="pointer cibCloseButton">&nbsp;</span>
 <div class="sectionCnt">
 <div id="clusterMessages"></div>
 <form id="authorProfileForm" name="AuthorProfileForm" class="noMargin" action="/author/profile/handle.uri" method="post">
-<input type="hidden" name="citedAuthorsVal" value="7004820433"/>
+<input type="hidden" name="citedAuthorsVal" value="56239550100"/>
 <input type="hidden" name="citedAuthorsGroupedVal" value=""/>
-<input id="authId" name="aid" type="hidden" value="7004820433"/>
+<input id="authId" name="aid" type="hidden" value="56239550100"/>
 <input type="hidden" name="oneClickExport"/>
 <input type="hidden" name="tabSelected"/>
 <input type="hidden" name="ctoCount"/>
@@ -244,26 +244,22 @@ class="pointer cibCloseButton">&nbsp;</span>
 <input id="st2" name="st2" type="hidden" value=""/>
 <input id="resultsKey" name="resultsKey" type="hidden" value=""/>
 <input id="feedbackWizardEnabled" name="feedbackWizardEnabled" type="hidden" value="true"/>
-<input type="hidden" name="authorPreferredName" value="Lesuer, Donald R."/>
+<input type="hidden" name="authorPreferredName" value="Mahmud, Abdullah Saad"/>
 <input type="hidden" name="sgroup" id="sgroup" value=""/>
 <input type="hidden" name="origin" value="AuthorProfile"/>
-<input type="hidden" name="orgDomain" value="llnl.gov"/>	
-<input type="hidden" name="emailAddress" value="lesuer1@llnl.gov"/>
+<input type="hidden" name="orgDomain" value="upm.edu.my"/>	
+<input type="hidden" name="emailAddress" value="asmahmud@hotmail.com"/>
 <input type="hidden" name="documentCount" value="0"/>
 <input type="hidden" name="documentGroupCount" value="0"/>
 <input type="hidden" name="citedbyThreshhold" id="citeThreshold" value="false"/>
 <input type="hidden" name="citedbyGroupThreshhold" id="citeGroupThreshold" value="false"/>
 <div id="emailAddr" style="display:none"></div>
 <div class="padding0" id="messagePH"></div>
-<div class="txtZoneInfoMsgContainer">
-<span class="ariaHidden">Information message</span>
-The Scopus Author Identifier assigns a unique number to groups ofdocuments written by the same author via an algorithm that matchesauthorship based on a certain criteria. If a document cannot beconfidently matched with an author identifier, it is grouped separately.In this case, you may see more than 1 entry for the same author.
-</div>
 <div id="profilelayout" data-isPreview="false">
 <div id="profileleftside" class="containerSizeChange">
 <div id="profileleftinside" >
 <div id="printEmailLinksPH"></div>
-<div class="authInfoSection" data-lattes="" data-lattes-url=""><div class="nameSection"><h1><span class="hidden-label">Scopus - Author details -</span>Lesuer,&nbsp;Donald R.</h1><div class="authAffilcityCounty">Lawrence Livermore National Laboratory,Livermore,United States</div><div class="authId">Author ID: 7004820433</div><div></div></div><div class="rightSection"><div class="linkContainer"><a href="/standard/help.uri?topic=2845" class="" target="_blank"  title='About Scopus author identifier (opens in a new window)'>About Scopus Author Identifier	</a><span class="divider">|</span><span id="addlAuthorsHeaderTop"><a href="#potAuthModal" class="" id="showPotAuthModal" title='View potential author matches '>View potential author matches </a></span></div><div class="nameVariants"><span class="label">Other name formats:</span><ul class="names"><span class="displayBlock"><li>Lesuer</li></span>				<span class="displayBlock"><li>Lesuer, Don</li></span>				<span class="displayBlock"><li>Lesuer, Donald</li></span>				<span class="displayNone"><li>Lesuer, D. R.</li></span>				<span class="displayNone"><li>Lesuer, D.</li></span>				<a href="#nameVar"  class="othNameVarntViewMore " id="othNameVarntlink"title='View More (opens in a new window)'>View More</a></ul><div class="clear"></div></div></div>  <div class="clear"></div></div>
+<div class="authInfoSection" data-lattes="" data-lattes-url=""><div class="nameSection"><h1><span class="hidden-label">Scopus - Author details -</span>Mahmud,&nbsp;Abdullah Saad</h1><div class="authAffilcityCounty">Universiti Putra Malaysia, Department of Aerospace Engineering,Serdang,Malaysia</div><div class="authId">Author ID: 56239550100</div><div></div></div><div class="rightSection"><div class="linkContainer"><a href="/standard/help.uri?topic=2845" class="" target="_blank"  title='About Scopus author identifier (opens in a new window)'>About Scopus Author Identifier	</a><span class="divider">|</span><span id="addlAuthorsHeaderTop"><a href="#potAuthModal" class="" id="showPotAuthModal" title='View potential author matches '>View potential author matches </a></span></div><div class="nameVariants"><span class="label">Other name formats:</span><ul class="names"><span class="displayBlock"><li>Mahmud, Abdullah S.</li></span>				</ul><div class="clear"></div></div></div>  <div class="clear"></div></div>
 <div id="authorPublicationsPH"></div>
 <div id="authorTabPH"></div>
 </div>
@@ -307,7 +303,7 @@ title='Click to request author detail corrections for this author (opens in a ne
 </div>
 <div class="profFooterBakResults">
 <div class="bakResultCnt">           
-The data displayed above is compiled exclusively from articles published in the Scopus database. To request corrections to any inaccuracies or provide any further feedback, please <a href="/author/profile/feedback.uri?id=7004820433&amp;origin=AuthorProfile" onClick="document.AuthorProfileForm.clickedLink.value='FeedbackButton'; document.AuthorProfileForm.submit(); return false;" title='Send your author feedback to Scopus (registration required)'>contact us</a> (registration required).	    		
+The data displayed above is compiled exclusively from articles published in the Scopus database. To request corrections to any inaccuracies or provide any further feedback, please <a href="/author/profile/feedback.uri?id=56239550100&amp;origin=AuthorProfile" onClick="document.AuthorProfileForm.clickedLink.value='FeedbackButton'; document.AuthorProfileForm.submit(); return false;" title='Send your author feedback to Scopus (registration required)'>contact us</a> (registration required).	    		
 </div>                  
 <div class="bakResultCnt">            
 The data displayed above is subject to the privacy conditions contained in the <a href="http://www.elsevier.com/locate/privacypolicy" target="_blank" title='privacy policy (opens in a new window)'> privacy policy </a>.
@@ -324,7 +320,7 @@ The data displayed above is subject to the privacy conditions contained in the <
 <li class="addInfoRow row1">
 <div class="labelColumn">Documents:</div>
 <div class="valueColumn">
-<a href="#" id="docCntLnk" data-title='View a list of documents by this author below' title='View a list of documents by this author below'>83</a>
+<a href="#" id="docCntLnk" data-title='View a list of documents by this author below' title='View a list of documents by this author below'>4</a>
 </div>
 <div class="valueColumnLink">
 <a href="javascript:submitAuthorFormForClickedLinks('HirschSingleAuthorEvaluatorButton');" class="jsEnabled txtSmaller iconAuthorEvaluator " 
@@ -335,10 +331,11 @@ title="View charts and graphs related to this author">Analyze author output</a>
 <li class="addInfoRow row2">
 <div class="labelColumn">Citations:</div>
 <div class="valueColumn">
-<span id="totalCiteCount"></span> total citations by <a href="#" id="citationCntLnk" title='View a list of documents citing this author below' data-title='View a list of documents citing this author below'>993</a> documents
+  				
+<span id="totalCiteCount"></span> total citations by <a href="#" id="citationCntLnk" title='View a list of documents citing this author below' data-title='View a list of documents citing this author below'>2</a> documents
 </div>
 <div class="valueColumnLink">
-<div id="cto2Href" class="displayNone">/cto2/author.uri?authors=7004820433&amp;origin=AuthorProfile</div>
+<div id="cto2Href" class="displayNone">/cto2/author.uri?authors=56239550100&amp;origin=AuthorProfile</div>
 <a href="#" id="authViewCitOver" onclick="CitOver.viewCitationOverviewAuthorDetails('main');" 
 title='View a citation overview of this author' class="txtSmaller icon citationOverview zoomFix ">
 View citation overview</a>
@@ -347,15 +344,15 @@ View citation overview</a>
 <div class="clear"></div>
 </li>
 <div class="clear"></div>
-<input type="hidden" name="documentCount" id="documentCountHidden" value="83"/>
-<input type="hidden" name="hSingleIndex" id="hSingleIndexHidden" value="20"/>
+<input type="hidden" name="documentCount" id="documentCountHidden" value="4"/>
+<input type="hidden" name="hSingleIndex" id="hSingleIndexHidden" value="1"/>
 </li>
 <li  class="addInfoRow row3">
 <div class="labelColumn">
 <span class="spanItalic">h</span>-index:
 </div>
 <div class="valueColumn">
-<span>20</span>
+<span>1</span>
 <span> 
 <a href="/standard/help.uri?topic=2349" target="globalHelp" onClick="return openGlobalhelp('/standard/help.uri?topic=2349','globalHelp',760,570,0)" class="txtSmaller searchTipsIconActive paddingL6" 
 title="Scopus is in progress of updating pre-1996 cited references going back to 1970. The h-index might increase over time. Learn more about h-index." >&nbsp;
@@ -373,7 +370,7 @@ title='View h-graph of this author' class="jsEnabled txtSmaller icon viewHGraph 
 <li class="addInfoRow row4">
 <div class="labelColumn">Co-authors:</div>
 <div class="valueColumn">
-<a href="#" id="coAuthCntLnk" title='View a list of authors who have published with this author below' data-title='View a list of authors who have published with this author below'>86</a>
+<a href="#" id="coAuthCntLnk" title='View a list of authors who have published with this author below' data-title='View a list of authors who have published with this author below'>4</a>
 </div>
 <div class="clear"></div>
 </li>
@@ -381,18 +378,14 @@ title='View h-graph of this author' class="jsEnabled txtSmaller icon viewHGraph 
 <div class="labelColumn">Subject area:</div>
 <div class="valueColumn" id="subjAreas">
 <div>
-Materials Science
-,&nbsp;
 Engineering
-<span id="subjectarea" class="displayNone">
 ,&nbsp;
-Physics and Astronomy
+Materials Science
+<span id="subjectarea" class="displayNone">
 ,&nbsp;
 Earth and Planetary Sciences
 ,&nbsp;
-Computer Science
-,&nbsp;
-Environmental Science
+Physics and Astronomy
 </span> <span class="viewMoreOption"><a href="#" onclick="toggleSubjectArea()" class="subjViewMoreLink ">
 <span id="subjectarealink" title='Show more subject areas'>View More</span></a></span>
 </div>
@@ -431,40 +424,40 @@ title='Email a link to this data'>E-mail
 <div class="authorTabHolder">
 <div>
 <div id='export_results-data'  class="displayNone"><div id='export_references-data'><div class='exportPadding' id="exportBubble"><h2 class='exportHeadingFont floatL'>Choose your default reference manager or file type:</h2><a class='exportHelp' href="#" role='button' alt='Get help with export (Opens in a new window)' title='Get help with export (Opens in a new window)' onclick="return openGlobalhelp('/standard/help.uri?zone=TopNavBar&origin=export&topic=2871','globalHelp',760,570,0);"></a><a id='closeExport' href="#" role='button' class='closeExport' alt='Close' title='Close'></a><div class="exportPaddingTB exportSubHeadingFont">Scopus offers integrated export functionality with Mendeley and Refworks.		<br>Or, to use a different reference manager, choose a file format</div><div><div class='width floatL jpWidth'><div  class='bgMedImage exportFont mendWidth'><span id='saveToMed' class='menImgTxtCntr' tabindex=0>Save to Mendeley</span></div><div  class='bgRefImage exportFont refWorksWidth ' ><span id='refWorkDir' class='refImgTxtCntr' tabindex=0>RefWorks direct export</span></div></div><div class='floatL formatTypeMargin'><ul><li><div class='exportFormatRadio '><span class="custom-radioBtn paddingRight" id="custom-radioBtn-RisFormat"><input type='radio' name="exportRadio" id="RIS"><span class="circle"><span class="dot"></span></span></span><label for='RIS'>RIS Format</label><span class="bgEndNoteImage"></span></div><div class='innerExportPadding exportSubHeadingFont'>EndNote, Reference Manager</div></li>				<li><div class='exportFormatRadio'><span class="custom-radioBtn paddingRight" id="custom-radioBtn-CSV"><input type='radio' name="exportRadio" id="CSV"><span class="circle"><span class="dot"></span></span></span><label for='CSV'>CSV</label></div><div class='innerExportPadding exportSubHeadingFont'>Excel</div></li><li><div class='exportFormatRadio bibTextPaddding'><span class="custom-radioBtn paddingRight" id="custom-radioBtn-BibTex"><input type='radio' name="exportRadio" id="BIB"><span class="circle"><span class="dot"></span></span></span><label for='BIB'>BibTeX</label></div></li><li><div class='exportFormatRadio'><span class="custom-radioBtn paddingRight" id="custom-radioBtn-Text"><input type='radio' name="exportRadio" id="TEXT"><span class="circle"><span class="dot"></span></span></span><label for='TEXT'>Text</label></div><div class='innerExportPadding exportSubHeadingFont'>ASCII in HTML</div></li></ul></div><div class='clearBoth'></div></div><div id='normalExport'><h2 class='chooseExport exportHeadingFont'>Choose the information to export:</h2><div class='exportSubHeadingFont firstSubHeading'>Choose the information you want to export to the reference manager or file.</div><div class='exportSelect ddlSect ui-front'><select id="exportView" name="view" class='selectExportFont'><option value="CiteOnly">			Citation information only</option><option value="CiteAbsKeyws">Citations and abstract information</option><option value="CiteAbsKeywsRefs">Citations, abstract and references</option><option value="FullDocument">All available information</option><option value="SpecifyFields">Specify fields to be exported</option></select></div><div id='exportViewDivDiabled' class='displayNone ddlSect ui-front'>		<select id="exportViewDiabled"  class='selectExportFont disabledSelectBox exportSelect' disabled='disabled'><option value="0">			</option>				</select><div class='mendeleyExportDes'>This setting is made within Mendeley.</div></div><div id="wholeHelpSection"><div class="thirdBox"  id="help"><div  id="viewHelp" class="width100"><div class="exportSubHeadingFont viewHelpSubHead">Selected field includes:</div><div class="left exportSubHeadingFont exportInfoSpacing exportInfoFirst"><div id="CiteOnly"><span class="helpULHeaderScopus ">Citation information</span><ul class="helpUL"><li class="helpLI">Author(s), document title,year, <span id="eidLi" class="displayNone">EID</span><br>source title, volume, issue, pages<br>citation count, source and document Type, DOI</li></ul></div><div id="Bib" style="display:none;" ><span class="helpULHeaderScopus ">Bibliographical information</span><ul class="helpUL"><li class="helpLI">Affiliations</li></ul></div><div id="FullBib" style="display:none;" ><span class="helpULHeaderScopus ">Bibliographical information</span><ul class="helpUL"><li class="helpLI">Affiliations,serial identifiers (e.g. ISSN), doi,<br>pubMed id, publisher, editor(s), language of original document<br>correspondence address, abbreviated source title</li></ul></div></div><div class="left exportSubHeadingFont "><div id="CiteAbsKeyws"  class='displayNone exportInfoSpacing'><span class="helpULHeaderScopus ">Abstract and Keywords</span><ul class="helpUL"><li class="helpLI">Abstract, author keywords</ul></div><div id="CiteAbsKeywsRefs"  class='displayNone exportInfoSpacing rightPaddingSecColumn'><div><span class="helpULHeaderScopus ">Abstract and Keywords</span><UL class="helpUL"><li class="helpLI">Abstract, author keywords</li><li class="helpLI" style="display:none" id="ik">index keywords</li></ul></div><div id="fd" class="displayNone" ><span class="helpULHeaderScopus ">Fund Details</span><ul class="helpUL"><li class="helpLI">Number, acronym,sponsor</li></ul></div><div><span class="helpULHeaderScopus ">References</span><UL class="helpUL"><li class="helpLI">References</li></ul></div><div id="otherInfo" class="displayNone"><span class="helpULHeaderScopus ">Other information</span><UL class="helpUL"><li class="helpLI">Tradenames and manufacturers, accession numbers and chemicals<br>conference information</li></ul></div></div></div>	<div class="clearBoth"></div>		</div></div><div id="exportSpecifyFields"  class='displayNone exportSubHeadingFont width100'><div class="left"><div><ul class="specifyFieldsUL"><li class="specifyFieldsLI "><span class="custom-checkbox"><input id="selectedCitationInformationItemsAll-Export" type="checkbox" onclick="selectDeselectCheckBoxs(this)"  value="on" name="selectedCitationInformationItemsAll"><span class="box"><span class="tick"></span></span></span><span><label for="selectedCitationInformationItemsAll-Export">Citation information</label></span></li><li><span class="custom-checkbox"><input id="selectedCitationInformationItems-Export1" type="checkbox" class="chkbox"  onclick="selectDeselectSubCheckBoxs(this)"  value="_Authors_" name="selectedCitationInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedCitationInformationItems-Export1">Author(s)</label></li><li><span class="custom-checkbox"><input id="selectedCitationInformationItems-Export2" type="checkbox" class="chkbox"  onclick="selectDeselectSubCheckBoxs(this)"  value="_Title_" name="selectedCitationInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedCitationInformationItems-Export2">Document title</label>	</li><li><span class="custom-checkbox"><input id="selectedCitationInformationItems-Export3" type="checkbox" class="chkbox" onclick="selectDeselectSubCheckBoxs(this)"  value="_Year_" name="selectedCitationInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedCitationInformationItems-Export3">Year</label></li><li id="eidChckbox" class="displayNone"><span class="custom-checkbox"><input id="selectedCitationInformationItems-Export8" type="checkbox" class="chkbox" onclick="selectDeselectSubCheckBoxs(this)"  value="_EID_" name="selectedCitationInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedCitationInformationItems-Export8">EID</label></li><li><span class="custom-checkbox"><input id="selectedCitationInformationItems-Export4" type="checkbox" class="chkbox" onclick="selectDeselectSubCheckBoxs(this)" value="_SourceTitle_" name="selectedCitationInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedCitationInformationItems-Export4">Source title</label></li><li><span class="custom-checkbox"><input id="selectedCitationInformationItems-Export5" type="checkbox"  class="chkbox" onclick="selectDeselectSubCheckBoxs(this)"  value="_Volume_Issue_ArtNo_PageStart_PageEnd_PageCount_" name="selectedCitationInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedCitationInformationItems-Export5">Volume, Issue, Pages</label></li><li><span class="custom-checkbox"><input id="selectedCitationInformationItems-Export6" type="checkbox" class="chkbox" onclick="selectDeselectSubCheckBoxs(this)"  value="_CitedBy_" name="selectedCitationInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedCitationInformationItems-Export6">Citation count</label></li><li><span class="custom-checkbox"><input id="selectedCitationInformationItems-Export7" type="checkbox"  class="chkbox" onclick="selectDeselectSubCheckBoxs(this)"  value="_DocumentType_Source_" name="selectedCitationInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedCitationInformationItems-Export7">Source and Document Type</label></li><li><span class="custom-checkbox"><input type="checkbox" name="selectedCitationInformationItems" value="_DOI_" onclick="selectDeselectSubCheckBoxs(this)" id="selectedCitationInformationItems-Export9"><span class="box"><span class="tick"></span></span></span><label for="selectedCitationInformationItems-Export9">DOI</label></li></ul></div><div><ul class="specifyFieldsUL"><li class="specifyFieldsLI "><span class="custom-checkbox"><input id="selectedOtherInformationItemsAll-Export" type="checkbox" onclick="selectDeselectCheckBoxs(this)" value="on" name="selectedOtherInformationItemsAll"><span class="box"><span class="tick"></span></span></span><span ><label for="selectedOtherInformationItemsAll-Export">Other information</label></span></li><li><span class="custom-checkbox"><input id="selectedOtherInformationItems-Export1" type="checkbox" onclick="selectDeselectSubCheckBoxs(this)" value="_Manufacturers_Tradenames_" name="selectedOtherInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedOtherInformationItems-Export1">Tradenames and Manufacturers</label></li><li><span class="custom-checkbox"><input type="checkbox" name="selectedOtherInformationItems" value="_ChemicalsCAS_MolecularSequenceNumbers_" onclick="selectDeselectSubCheckBoxs(this)" id="selectedOtherInformationItems-Export2"><span class="box"><span class="tick"></span></span></span><label for="selectedOtherInformationItems-Export2">Accession numbers and Chemicals</label></li><li><span class="custom-checkbox"><input type="checkbox" name="selectedOtherInformationItems" value="_ConferenceName_ConferenceDate_ConferenceLocation_ConferenceCode_Sponsors_" onclick="selectDeselectSubCheckBoxs(this)" id="selectedOtherInformationItems-Export3"><span class="box"><span class="tick"></span></span></span><label for="selectedOtherInformationItems-Export3">Conference information</label></li></ul></div></div><div class="left"><div>	<UL class="specifyFieldsUL"><li class="specifyFieldsLI "><span class="custom-checkbox"><input type="checkbox" name="selectedBibliographicalInformationItemsAll" value="on" onclick="selectDeselectCheckBoxs(this)" id="selectedBibliographicalInformationItemsAll-Export"><span class="box"><span class="tick"></span></span></span><span ><label for="selectedBibliographicalInformationItemsAll-Export">Bibliographical information</label></span></li><li><span class="custom-checkbox"><input type="checkbox" name="selectedBibliographicalInformationItems" value="_Affiliations_" onclick="selectDeselectSubCheckBoxs(this)" id="selectedBibliographicalInformationItems-Export1"><span class="box"><span class="tick"></span></span></span><label for="selectedBibliographicalInformationItems-Export1">Affiliations</label></li><li><span class="custom-checkbox"><input type="checkbox" name="selectedBibliographicalInformationItems" value="_ISSN_ISBN_CODEN_" onclick="selectDeselectSubCheckBoxs(this)" id="selectedBibliographicalInformationItems-Export2"><span class="box"><span class="tick"></span></span></span><label for="selectedBibliographicalInformationItems-Export2">Serial identifiers (e.g. ISSN)</label></li>					<li><span class="custom-checkbox"><input type="checkbox" name="selectedBibliographicalInformationItems" value="_PubMedID_" onclick="selectDeselectSubCheckBoxs(this)" id="selectedBibliographicalInformationItems-Export4"><span class="box"><span class="tick"></span></span></span><label for="selectedBibliographicalInformationItems-Export4">PubMed ID</label></li><li><span class="custom-checkbox"><input type="checkbox" name="selectedBibliographicalInformationItems" value="_Publisher_" onclick="selectDeselectSubCheckBoxs(this)" id="selectedBibliographicalInformationItems-Export5"><span class="box"><span class="tick"></span></span></span><label for="selectedBibliographicalInformationItems-Export5">Publisher</label></li><li><span class="custom-checkbox"><input type="checkbox" name="selectedBibliographicalInformationItems" value="_Editors_" onclick="selectDeselectSubCheckBoxs(this)" id="selectedBibliographicalInformationItems-Export6"><span class="box"><span class="tick"></span></span></span><label for="selectedBibliographicalInformationItems-Export6">Editor(s)</label></li><li><span class="custom-checkbox"><input type="checkbox" name="selectedBibliographicalInformationItems" value="_LanguageOfOriginalDocument_" onclick="selectDeselectSubCheckBoxs(this)" id="selectedBibliographicalInformationItems-Export7"><span class="box"><span class="tick"></span></span></span><label for="selectedBibliographicalInformationItems-Export7">Language of Original Document</label></li><li><span class="custom-checkbox"><input type="checkbox" name="selectedBibliographicalInformationItems" value="_CorrespondenceAddress_" onclick="selectDeselectSubCheckBoxs(this)" id="selectedBibliographicalInformationItems-Export8"><span class="box"><span class="tick"></span></span></span><label for="selectedBibliographicalInformationItems-Export8">Correspondence Address</label></li><li><span class="custom-checkbox"><input type="checkbox" name="selectedBibliographicalInformationItems" value="_AbbreviatedSourceTitle_" onclick="selectDeselectSubCheckBoxs(this)" id="selectedBibliographicalInformationItems-Export9"><span class="box"><span class="tick"></span></span></span><label for="selectedBibliographicalInformationItems-Export9">Abbreviated Source Title</label></li></ul>	</div></div>	<div class="left specificRightPadding" ><div><ul class="specifyFieldsUL"><li class="specifyFieldsLI "><span class="custom-checkbox"><input id="selectedAbstractInformationItemsAll-Export" type="checkbox" onclick="selectDeselectCheckBoxs(this)" value="on" name="selectedAbstractInformationItemsAll"><span class="box"><span class="tick"></span></span></span><span ><label for="selectedAbstractInformationItemsAll-Export">Abstract and Keywords</label></span></li><li><span class="custom-checkbox"><input id="selectedAbstractInformationItems-Export1" type="checkbox" onclick="selectDeselectSubCheckBoxs(this)" value="_Abstract_" name="selectedAbstractInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedAbstractInformationItems-Export1">Abstract</label></li><li><span class="custom-checkbox"> <input id="selectedAbstractInformationItems-Export2" type="checkbox" onclick="selectDeselectSubCheckBoxs(this)" value="_AuthorKeywords_" name="selectedAbstractInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedAbstractInformationItems-Export2">Author Keywords</label></li><li><span class="custom-checkbox"><input id="selectedAbstractInformationItems-Export3" type="checkbox" onclick="selectDeselectSubCheckBoxs(this)" value="_IndexKeywords_" name="selectedAbstractInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedAbstractInformationItems-Export3">Index Keywords</label></li></ul></div><div ><UL class="specifyFieldsUL"><li class="specifyFieldsLI "><span class="custom-checkbox"><input id="selectedFundInformationItemsAll-Export" type="checkbox" onclick="selectDeselectCheckBoxs(this)" value="on" name="selectedFundInformationItemsAll"><span class="box"><span class="tick"></span></span></span><span ><label for="selectedFundInformationItemsAll-Export">Funding Details</label></span></li><li><span class="custom-checkbox"><input id="selectedFundInformationItems-Export1" type="checkbox" onclick="selectDeselectSubCheckBoxs(this)" value="_Number_" name="selectedFundInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedFundInformationItems-Export1">Number</label>		</li><li><span class="custom-checkbox">  <input id="selectedFundInformationItems-Export2" type="checkbox" onclick="selectDeselectSubCheckBoxs(this)" value="_Acronym_" name="selectedFundInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedFundInformationItems-Export2">Acronym</label></li><li><span class="custom-checkbox"><input id="selectedFundInformationItems-Export3" type="checkbox" onclick="selectDeselectSubCheckBoxs(this)" value="_Sponsor_" name="selectedFundInformationItems"><span class="box"><span class="tick"></span></span></span><label for="selectedFundInformationItems-Export3">Sponsor</label></li></ul></div><div><ul class="specifyFieldsUL"><li class="specifyFieldsLI "><span class="custom-checkbox"> <input id="selectedReferenceInformationItems-Export" type="checkbox" value="_References_" name="selectedReferenceInformationItems"><span class="box"><span class="tick"></span></span></span><span ><label for="selectedReferenceInformationItems-Export">References</label></span></li></ul></div></div>	<div class='clearBoth'></div>				</div></div></div><div id='referenceExport' class='displayNone'><div class='exportHeadingFont referenceMessage'></div><div class="left exportSubHeadingFont exportInfoSpacing exportInfoFirstReference"><div><span class="helpULHeaderScopus Bold">Citation information</span><ul class="helpUL"><li class="helpLI">Author(s), document title,year, <span id="refEidLi" class="displayNone">EID</span><br>source title,volume, issue, pages<br>citation count, source and document Type</li></ul></div></div><div class='clearBoth'></div></div><div class='dataExportBlock'>	<div class="floatR"><div class='floatL'><input type="button" title='Disabled - Select a file format above to Export' alt='Disabled - Select a file format above to Export' class="btnEnable exportBtn" id="exportTrigger" value='Export' name="ExportPopUp" onclick="oneClick.oneClickExportSubmit(this,true);" ></div><div class='clearLeft'></div></div><div class='clearRight'></div></div></div></div></div><div class='txtZoneInfoMsgContainer displayNone' role="alert"></div><div class='confirmMsgContainer displayNone' role="alert"><span></span></div><div class='warningMsgContainer displayNone' role="alert"></div><div id='chunkExport-data' class='displayNone'><div class ='exportPadding'><div class='exportHeadingFont'><span class="closeExport chunkExportClose" id="chunkExportClose"></span>With this many documents selected, please choose your <br> preferred export type:	</div><div class='exportPaddingTB exportHeadingFont'><span class="custom-radioBtn"><input type='radio' name='exportTypeSelection'  id='exportRadio'/><span class="circle"><span class="dot"></span></span></span><span id='exportTypeAndFormat'  class=' exportTypeAndFormatBold'></span></div><div id='nonMendeleyExpLimitMsg' class='limitMessage exportSubHeadingFont displayNone'>Only the first 2,000 documents will be exported.</div><div id='mendeleyExpLimitMsg' class='limitMessage exportSubHeadingFont displayNone'>Only the first 1,000 documents will be exported.</div><div class='exportSeparator orFontAndColor'><span>OR</span><span class='horizontalLine'></span></div><div><span class="custom-radioBtn "><input type='radio' name='exportTypeSelection' checked='checked' id='chunkExportRadio'/><span class="circle"><span class="dot"></span></span></span><span id='exportMessageAndSize' class='exportTypeAndFormat exportHeadingFont'></span></div><div class='exportExp exportSubHeadingFont'>Citation information includes:<br><span class='subtitleExp exportSubHeadingFont'>Author(s),document title,year,source title,<br>volume, issue, pages,					citation count,source and document Type,DOI</span></div><div id='chunkExportFormSection'><div class='exportPaddingTB emailAndAddress'>Email address</div><div><input type='text' id='emailAddress' class="roundedSmall defaultText defaultTextActive waterMarkOn exportpopupTextBoxWidth" value='' /></div><div class='exportPaddingTB emailAndAddress'><span>Email format</span><span class="custom-radioBtn htmlAndText"><input type='radio' name='emailFormat' id='HTML' checked='checked'/><span class="circle"><span class="dot"></span></span></span><span class='Bold'><label for='HTML'>HTML</label></span><span class="custom-radioBtn htmlAndText"><input type='radio' name='emailFormat' id='EMAIL_TEXT'/><span class="circle"><span class="dot"></span></span></span><span class='Bold'><label for='EMAIL_TEXT'>Text</label></span></div><div class='exportSubHeadingFont'>When completed, we will email you a link to download your export.<br> The link will be available for 7 days.</div></div><div class="floatRight chunkExportButton"><input type="button" title='Export' alt='Export' class="btnDisabled exportBtn" id="chunkExportTrigger" value='Export' name="ExportPopUp" onclick="oneClick.chunkExportSubmit(this,true);" disabled='disabled' ></div><div class='clearBoth'></div></div></div><div id='exportLimit' class='displayNone'>2000</div><div id='exportLimitMax' class='displayNone'>20000</div><div id='exportLimitMendeley' class='displayNone'>1000</div> 
-<input type="hidden" id='doccountVal' value='83'>
-<input type="hidden" id='citecountVal' value='993'>
+<input type="hidden" id='doccountVal' value='4'>
+<input type="hidden" id='citecountVal' value='2'>
 <div class="padding0 docOverTwoK" id="docTabMsgPH"></div>
 <div class="padding0 docOverTwoK" id="tabMsgPH">
-<div id="warningMsgContainer" role="alert" aria-live="assertive"><span class="ariaHidden">Warning message</span><span>Your search found 993 documents. Scopus can display up to 2000 documents in the search results list.<p> To see a different set of 2000 documents from your search results, choose a different sort option.</p></span></div>
+<div id="warningMsgContainer" role="alert" aria-live="assertive"><span class="ariaHidden">Warning message</span><span>Your search found 2 documents. Scopus can display up to 2000 documents in the search results list.<p> To see a different set of 2000 documents from your search results, choose a different sort option.</p></span></div>
 </div>
 <div class="authTab">
-<div id="tabs" data-count='{"doccount":83,"citecount":993,"coauthcount":86}'>
+<div id="tabs" data-count='{"doccount":4,"citecount":2,"coauthcount":4}'>
 <ul>
 <li class="docRel">
 <h3>
-<a href="#documentTab"  id="docLi" data-title="Select to view author’s document list">83 Documents</a>
+<a href="#documentTab"  id="docLi" data-title="Select to view author’s document list">4 Documents</a>
 </h3>
 </li>
 <li class="docRelSep"><span class="link_sep">|</span></li>
 <li class="citedByRel">
 <h3>
-<a href="#citedByTab" id="citedLi" title="Select to view author’s citation list" data-title="Select to view author’s citation list">Cited by 993 documents </a>
+<a href="#citedByTab" id="citedLi" title="Select to view author’s citation list" data-title="Select to view author’s citation list">Cited by 2 documents </a>
 </h3>
 </li>
 <li class="citedByRelSep"><span class="link_sep">|</span></li>	
 <li class="coAuthRel">
 <h3>
-<a href="#coAuthTab" id="coAuthLi" title="Select to view author’s co-author list" data-title="Select to view author’s co-author list"><span>86</span> co-authors</a>
+<a href="#coAuthTab" id="coAuthLi" title="Select to view author’s co-author list" data-title="Select to view author’s co-author list"><span>4</span> co-authors</a>
 </h3>
 </li>
 </ul>
 <div id="documentTab" class="docRel">
 <div class="authDocumentOptions">
 <div class="resultsCountLabel floatL">
-<h2><span class="resultsCount">83</span> documents</h2>
+<h2><span class="resultsCount">4</span> documents</h2>
 </div>
 <div class="authorResultsOptionalLinks ">
-<a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=documentsTab&amp;authorId=7004820433" title="View in search results format for more sorting options and/or to view a full list of documents">
+<a href="https://www.scopus.com/search/submit/author.uri?author=Mahmud%2c+Abdullah+Saad&amp;origin=AuthorProfile&amp;zone=documentsTab&amp;authorId=56239550100" title="View in search results format for more sorting options and/or to view a full list of documents">
 View in search results format
 </a>
 </div>
@@ -502,7 +495,7 @@ Set document alert
 </span>
 <span class="divider">|</span>
 <span>
-<a href="/results/rss/handler.uri?authorId=7004820433&amp;authorName=Lesuer D." target="_blank" title='Set an RSS feed for when this author publishes new documents in Scopus' class="txtSmaller icon setFeed">
+<a href="/results/rss/handler.uri?authorId=56239550100&amp;authorName=Mahmud A." target="_blank" title='Set an RSS feed for when this author publishes new documents in Scopus' class="txtSmaller icon setFeed">
 Set document feed
 </a>
 </span>
@@ -513,11 +506,11 @@ Set document feed
 <div id="citedByTab" class="citedByRel">
 <div class="authDocumentOptions">
 <div class="resultsCountLabel floatL">
-<h2><span class="resultsCount">993</span> documents</h2>
+<h2><span class="resultsCount">2</span> documents</h2>
 </div>
 <div class="authorResultsOptionalLinks ">
-<a href="/author/citedby.uri?origin=authorProfile&zone=citedByTab&citedAuthorId=7004820433" title='View in search results format for more sorting options and/or to view a full list of documents'>
-View all in search results format
+<a href="/author/citedby.uri?origin=authorProfile&zone=citedByTab&citedAuthorId=56239550100" title='View in search results format for more sorting options and/or to view a full list of documents'>
+View in search results format
 </a>
 </div>
 <div class="sortContainer" id="citedBySortContainer"></div>
@@ -558,7 +551,8 @@ title="Top of page"> Top of page
 <div class="profBakReslutCont">
 </div>
 </div>
-<div id="authHistory"><div class="rightHeaderSection citedHeader">
+<div id="authHistory">
+<div class="rightHeaderSection citedHeader">
 <h2 class="txtLargest margin0">
 Author History
 </h2>
@@ -566,13 +560,13 @@ Author History
 <div class="rightContentSection">
 <div class="authorHisHeader" >
 <div class="hisPubyear">
-Publication range: 1979 - 2015
+Publication range: 2014 - Present
 </div>
 <div class="hisWebsearch" id="historyWebSrchPH"></div>
 <div class="section21" id="ReferenceDiv">
 References:		
-<a href="https://www.scopus.com/search/submit/references.uri?origin=AuthorProfile&amp;citeCnt=83&amp;sot=aut&amp;sdt=citedreferences&amp;citingId=7004820433" class="" title='see all references cited by this author' 
->1211</a>
+<a href="https://www.scopus.com/search/submit/references.uri?origin=AuthorProfile&amp;citeCnt=4&amp;sot=aut&amp;sdt=citedreferences&amp;citingId=56239550100" class="" title='see all references cited by this author' 
+>53</a>
 </div>
 </div>
 <div class="hr"><hr></div>
@@ -581,155 +575,22 @@ References:
 <br>
 <ul id="sourceHistoryUL">
 <li class="txtSmaller ">
-<a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=17815" title="Go to the information page for this source">Materials Science and Technology</a>&nbsp;
-<span class="txtSmaller floatR "><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Materials+Science+and+Technology&amp;authorId=7004820433" title="View documents of this author">
+<a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=16252" title="Go to the information page for this source">Journal of Aerospace Engineering</a>&nbsp;
+<span class="txtSmaller floatR "><a href="https://www.scopus.com/search/submit/author.uri?author=Mahmud%2c+Abdullah+Saad&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Journal+of+Aerospace+Engineering&amp;authorId=56239550100" title="View documents of this author">
 View documents	
 </a></span>
 </li>
 <li class="txtSmaller ">
-<a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=12302" title="Go to the information page for this source">JOM</a>&nbsp;
-<span class="txtSmaller floatR "><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=JOM&amp;authorId=7004820433" title="View documents of this author">
+<a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=4700151914" title="Go to the information page for this source">Applied Mechanics and Materials</a>&nbsp;
+<span class="txtSmaller floatR "><a href="https://www.scopus.com/search/submit/author.uri?author=Mahmud%2c+Abdullah+Saad&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Applied+Mechanics+and+Materials&amp;authorId=56239550100" title="View documents of this author">
 View documents	
 </a></span>
 </li>
 <li class="txtSmaller ">
-Proceedings of the Symposium on High Performance Metal and Ceramic Matrix Composites&nbsp;
-<span class="txtSmaller floatR "><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Proceedings+of+the+Symposium+on+High+Performance+Metal+and+Ceramic+Matrix+Composites&amp;authorId=7004820433" title="View documents of this author">
+Proceedings of the International Astronautical Congress, IAC&nbsp;
+<span class="txtSmaller floatR "><a href="https://www.scopus.com/search/submit/author.uri?author=Mahmud%2c+Abdullah+Saad&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Proceedings+of+the+International+Astronautical+Congress%2c+IAC&amp;authorId=56239550100" title="View documents of this author">
 View documents	
 </a></span>
-</li>
-<li class="txtSmaller ">					
-<ul id="sourceHistoryMoreUL">
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=37805" title="Go to the information page for this source">Acta Metallurgica et Materialia</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Acta+Metallurgica+et+Materialia&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=28700" title="Go to the information page for this source">Materials Science Forum</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Materials+Science+Forum&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=21117" title="Go to the information page for this source">International Journal of Plasticity</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=International+Journal+of+Plasticity&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=21119" title="Go to the information page for this source">International Materials Reviews</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=International+Materials+Reviews&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=70943" title="Go to the information page for this source">TMS Annual Meeting</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=TMS+Annual+Meeting&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=37076" title="Go to the information page for this source">Scripta Metallurgica et Materialia</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Scripta+Metallurgica+et+Materialia&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=19903" title="Go to the information page for this source">American Society of Mechanical Engineers, Pressure Vessels and Piping Division (Publication) PVP</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=American+Society+of+Mechanical+Engineers%2c+Pressure+Vessels+and+Piping+Division+%28Publication%29+PVP&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=28698" title="Go to the information page for this source">Materials Research Society Symposium - Proceedings</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Materials+Research+Society+Symposium+-+Proceedings&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=20622" title="Go to the information page for this source">Experimental Techniques</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Experimental+Techniques&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=28379" title="Go to the information page for this source">Scripta Materialia</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Scripta+Materialia&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=17811" title="Go to the information page for this source">Materials Science and Engineering A</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Materials+Science+and+Engineering+A&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=110083" title="Go to the information page for this source">Metallurgical Transactions A</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Metallurgical+Transactions+A&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=18143" title="Go to the information page for this source">Rubber Chemistry and Technology</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Rubber+Chemistry+and+Technology&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=18189" title="Go to the information page for this source">Finite Elements in Analysis and Design</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Finite+Elements+in+Analysis+and+Design&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=39507" title="Go to the information page for this source">Elastomerics</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Elastomerics&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=27356" title="Go to the information page for this source">Metallurgical and Materials Transactions A: Physical Metallurgy and Materials Science</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Metallurgical+and+Materials+Transactions+A%3a+Physical+Metallurgy+and+Materials+Science&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=21162" title="Go to the information page for this source">Journal of Materials Science</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Journal+of+Materials+Science&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=27289" title="Go to the information page for this source">Materials Characterization</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Materials+Characterization&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=84269" title="Go to the information page for this source">Proceedings of the TMS Fall Meeting</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Proceedings+of+the+TMS+Fall+Meeting&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=29021" title="Go to the information page for this source">Journal of Nuclear Materials</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Journal+of+Nuclear+Materials&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=28526" title="Go to the information page for this source">Journal of Magnetism and Magnetic Materials</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Journal+of+Magnetism+and+Magnetic+Materials&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=21522" title="Go to the information page for this source">Ceramics International</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Ceramics+International&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-					  
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=28583" title="Go to the information page for this source">Acta Materialia</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Acta+Materialia&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=37076" title="Go to the information page for this source">Scripta Metallurgica et Materiala</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Scripta+Metallurgica+et+Materiala&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=21100239259" title="Go to the information page for this source">SAE Technical Papers</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=SAE+Technical+Papers&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> Aluminum and Magnesium for Automotive Applications&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Aluminum+and+Magnesium+for+Automotive+Applications&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> Proceedings of the 1985 SEM Spring Conference on Experimental Mechanics.&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Proceedings+of+the+1985+SEM+Spring+Conference+on+Experimental+Mechanics.&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=27356" title="Go to the information page for this source">Metallurgical and Materials Transactions A</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Metallurgical+and+Materials+Transactions+A&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=17811" title="Go to the information page for this source">Materials Science and Engineering A</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Materials+Science+and+Engineering+A&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> <a href="https://www.scopus.com/source/sourceInfo.uri?sourceId=27302" title="Go to the information page for this source">Materials Transactions</a>&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Materials+Transactions&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> Proceedings of the James Li Symposium on Micromechanics of Advanced Materials&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Proceedings+of+the+James+Li+Symposium+on+Micromechanics+of+Advanced+Materials&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-<li class="txtSmaller "> Proceedings of the 1995 Conference on Inorganic Matrix Composites&nbsp; 
-<span class="txtSmaller floatR"><a href="https://www.scopus.com/search/submit/author.uri?author=Lesuer%2c+Donald+R.&amp;origin=AuthorProfile&amp;zone=&amp;srcTitle=Proceedings+of+the+1995+Conference+on+Inorganic+Matrix+Composites&amp;authorId=7004820433" title="View documents of this author">
-View documents
-</a></span></li>					  	
-</ul>
 </li>
 </ul> 
 <div class="paddingB8">
@@ -748,100 +609,18 @@ View More
 <div class="relatedAffilRaw">
 <div>
 <div class="affilName">
-Lawrence Livermore National Laboratory,
-<div class="affilCity">Livermore</div>
-<div class="affilCountry">United States</div>					          
+Universiti Putra Malaysia, Department of Aerospace Engineering,
+<div class="affilCity">Serdang</div>
+<div class="affilCountry">Malaysia</div>					          
 </div>
 </div>
 </div>
 <div class="relatedAffilRaw">
 <div>
 <div class="affilName">
-National University of Science & Technology (MISIS),
-<div class="affilCity" >Moscow</div>
-<div class="affilCountry">Russian Federation</div>
-</div>						   
-</div>
-</div>
-<div class="relatedAffilRaw">
-			    	    	
-<div>
-<div class="affilName">
-Lawrence Livermore National Laboratory, Mfg. and Mat. Engineering Division,
-<div class="affilCity" >Livermore</div>
-<div class="affilCountry">United States</div>
-</div>						   
-</div>
-</div>
-<div class="relatedAffilRaw">
-<div>
-<div class="affilName">
-General Motors, Metallurgy Department,
-<div class="affilCity" >Detroit</div>
-<div class="affilCountry">United States</div>
-</div>						   
-</div>
-</div>
-<div class="relatedAffilRaw">
-<div>
-<div class="affilName">
-Lawrence Livermore National Laboratory, Manufacturing and Materials Engineering Division,
-<div class="affilCity" >Livermore</div>
-<div class="affilCountry">United States</div>
-</div>						   
-</div>
-</div>
-<div class="relatedAffilRaw">
-<div>
-<div class="affilName">
-University of Texas at Austin,
-<div class="affilCity" >Austin</div>
-<div class="affilCountry">United States</div>
-</div>						   
-</div>
-</div>
-<div class="relatedAffilRaw">
-<div>
-<div class="affilName">
-Case Western Reserve University,
-<div class="affilCity" >Cleveland</div>
-<div class="affilCountry">United States</div>
-</div>						   
-</div>
-</div>
-<div class="relatedAffilRaw">
-<div>
-<div class="affilName">
-University of California System,
-<div class="affilCity" >Oakland</div>
-<div class="affilCountry">United States</div>
-</div>						   
-</div>
-</div>
-<div class="relatedAffilRaw">
-<div>
-<div class="affilName">
-Lanxide Corp,
-<div class="affilCity" ></div>
-<div class="affilCountry"></div>
-</div>						   
-</div>
-</div>
-<div class="relatedAffilRaw">
-<div>
-<div class="affilName">
-Lawrence Livermore National Laboratory, Defense Sciences Engineering Division,
-<div class="affilCity" >Livermore</div>
-<div class="affilCountry">United States</div>
-</div>						   
-</div>
-</div>
-<div class="relatedAffilRaw">
-<div>
-<div class="affilName">
-UC Davis,
-<div class="affilCity" >Davis</div>
-<div class="affilCountry">United States</div>
+Universitas Al Azhar Indonesia, Vacuity of Engineering,
+<div class="affilCity" >Jakarta</div>
+<div class="affilCountry">Indonesia</div>
 </div>						   
 </div>
 </div>
@@ -868,6 +647,7 @@ UC Davis,
 <li><a target="_blank" href="http://www.elsevier.com/online-tools/scopus/content-overview/" title='Learn more about Scopus&#039; content coverage (opens in a new window)'>Content coverage</a></li>
 <li><a target="_blank" href="http://blog.scopus.com/" title='Read the Scopus Blog (opens in a new window)'>Scopus Blog</a></li>
 <li><a target="_blank" href="http://dev.elsevier.com/" title='Learn more about Scopus API&#039;s (opens in a new window)'>Scopus API</a></li>
+<li><a target="_blank" href="https://www.elsevier.com/legal/privacy-approach" title='View privacy matters page (opens in a new window)'>Privacy Matters</a></li>
 </ul>
 </div>
 <div class="productCol langCol">
@@ -878,7 +658,6 @@ UC Davis,
 日本語に切り替える
 </a>
 </li>
-		
 <li lang="zh-Hans" >
 <a lang="zh-Hans" hreflang="zh-Hans" href="/personalization/switch/Chinese.uri?origin=AuthorProfile&zone=footer&locale=zh_CN" target="_top" title="查看简体中文版本">
 切换到简体中文
@@ -911,7 +690,7 @@ UC Davis,
 <div>Copyright © 2016 <a target="_blank" href="http://www.elsevier.com" title="Go to the Elsevier site (opens in a new window)">Elsevier B.V</a>. All rights reserved. Scopus® is a registered trademark of Elsevier B.V.</div>
 <div>Cookies are set by this site. To decline them or learn more, visit our <a target="_blank" href="http://help.elsevier.com/app/answers/detail/a_id/2964/p/8150/" title="See Cookie details (opens in a new window)">Cookies page</a></div>
 </div>
-<div class="relxLogo"><img src="/static/images/relexLogo.svg" alt="RELX Group"></img></div>
+<div class="relxLogo"><a href="http://www.relx.com" title="Go to RELX Group Homepage (Opens in a new window)" target="_blank"><img src="/static/images/relexLogo.svg" alt="RELX Group"></img></a></div>
 <div class="clear"></div>
 </div>
 <script type="text/javascript">	
@@ -920,7 +699,7 @@ var originVal = "AuthorProfile";
 var SDM = new Object;
 SDM.si = new Object;
 SDM.si.sds = "f44607d0df9f9d3f22b52a6c0c73da1413bdd56a94400d1a5fccab0fc3783991ab1335dd8dee4be763ca9d11473d425b";
-SDM.tid = "29A9008E53E8A34122569B353D2FFD4A.zQKnzAySRvJOZYcdfIziQ:2";
+SDM.tid = "1FC83849EB5687E2537F0BC371893524.FZg2ODcJC9ArCe8WOZPvA:7";
 SDM.ep = new Object();
 SDM.ep.prDevice = "https://pa.elsevier.com,https://els-eum.elsst.com";
 SDM.ep.urlPrefix = "http://www.scopus.com";
@@ -929,8 +708,8 @@ SDM.pru = "https://pa.elsevier.com,https://els-eum.elsst.com";
 SDM.pru = window.location.protocol + SDM.pru.replace('http:','').replace('https:','');
 SDM.platform = "SC";
 SDM.pageType = "AuthorProfile";
-SDM.pageTransKey = "Thu Jul 14 03:33:54 EDT 2016#11250#29A9008E53E8A34122569B353D2FFD4A.zQKnzAySRvJOZYcdfIziQ:2#29A9008E53E8A34122569B353D2FFD4A.zQKnzAySRvJOZYcdfIziQ#183.157.160.53";
-SDM.sds = "c9b108b6e28e5514a0ac2f1672ae1d7eebead2a-Wa";
+SDM.pageTransKey = "Mon Aug 08 04:26:41 EDT 2016#lb2a846#1FC83849EB5687E2537F0BC371893524.FZg2ODcJC9ArCe8WOZPvA:7#1FC83849EB5687E2537F0BC371893524.FZg2ODcJC9ArCe8WOZPvA#222.205.105.198";
+SDM.sds = "01b39abf12966516580f6a3c9f60b150190f53-26n";
 SDM.pf = new Object();
 SDM.cpc = "SC";
 </script>
@@ -954,5 +733,5 @@ WAM.part = "";
 WAM.exportAction=function(format, info, count) {return true;};
 </script>
 </div>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"0268925da8","agent":"","beacon":"bam.nr-data.net","applicationTime":903,"applicationID":"23556416","transactionName":"MwAGYhBYX0oEABUNXQpKN0YQUF9eJgwPEEALCQhTEBZQTBELCAAdAAAQVwtVEREiJjVN","queueTime":0}</script></body>
+</body>
 </html>
