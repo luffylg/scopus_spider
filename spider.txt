@@ -1,24 +1,20 @@
-Corrosion of steel reinforcement in concrete of different compressive strengths
-Influence of corrosion and cracking on bond behavior and strength of reinforced concrete members
-Modeling the effect of corrosion on bond strength at the steel–concrete interface with finite-element analysis
-Standard practice for preparing, cleaning, and evaluating corrosion test specimens, American Society for Testing and Materials.
-Bond properties of corroded reinforcement with and without confinement
-Analysis of reinforced concrete beams affected by reinforcement corrosion
-Corrosion of basaltic pumice, colemanite, barite and blast furnace slag coated rebars in concretes
-Influence of fly ash on corrosion resistance and chloride ion permeability of concrete
-Deterioration of concrete due to reinforcement steel corrosion
-Effect of rebar coating on corrosion resistance and bond strength of reinforced concrete
-Correction factor suggestion for ACI development length provisions based on flexural testing of RC slabs with various levels of corroded reinforcing bars
-Bond strength prediction for reinforced concrete members with highly corroded reinforcing bars
-Bond behaviour of corroded reinforcing steel bars in concrete
-Corrosion influence on bond in reinforced concrete
-Evaluation of the bond properties between concrete and reinforcement as a function of the degree of reinforcement corrosion
-Effects of corrosion on bond behavior between steel strand and concrete
-Effects of confinements on the bond strength between concrete and corroded steel bars
-Modelling the effect of corrosion on bond in reinforced concrete
-An experimental study on the bond strength between reinforcement bars and concrete as a function of concrete cover, strength and corrosion level
-Cover cracking model in reinforced concrete structures subject to rebar corrosion
-Calculation of corrosion rate for reinforced concrete beams based on corrosive crack width
-Development of the corrosion-filled paste and corrosion layer at the steel/concrete interface
-Shape of corrosion-induced cracks in recycled aggregate concrete
-Bond behaviour of normal/recycled concrete and corroded steel bars
+Fi-ber-reinforced polymer composites for construction- state-of-the-art review
+Close look at construction issues and performance of four fi-ber-reinforced polymer composite bridge decks
+Joining techniques for fiber rein-forced polymer composite bridge deck systems
+Determination of mode-I fracture toughness and non- uniformity for GFRP double cantilever beam specimens with an adhesive layer
+Energy release rates for the ENF specimen using a beam on an elastic foundation
+Mode II fracture tough-ness evaluation using four point bend, end notched flexure test
+ Evaluation of the ac-curacy of the four-point bend end-notched flexure test for mode II delamination toughness determination
+Factors affecting the inter-laminar fracture energy of graphite/epoxy laminates
+ On the analysis and design of the end notched flexure (ENF) speci-men for mode II testing
+Corrections for mode II frac-ture toughness specimens of composites materials
+Energy release rates for the ENF specimen using a beam on an elastic foundation
+A simplified beam analysis of the end notched flexure mode II delamination specimen
+Novel beam analysis of end notched flexure specimen for mode-II fracture
+Composite action and adhesive bond between fiber-reinforced polymer bridge decks and main girders
+Mode I and II fracture behavior of adhesively- bonded pultruded compo-site joints
+ Composite Materials: Fa-tigue and Fracture (Third volume)
+Progressive crack growth analysis using interface element based on the virtual crack closure technique
+Standard test method for tensile properties of polymer matrix composite materials
+Standard ASTM D6272, Standard test method for flexural properties of unreinforced and reinforced plastics and electrical insulating materials by four-point bending
+Strain energy release rate calculation for a moving delamination front of arbitrary shape based on the virtual crack closure technique. Part I: Formula-tion and validation
