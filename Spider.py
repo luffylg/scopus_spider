@@ -182,7 +182,7 @@ class WenxianSpiderMain(object):
 
     #输入文献名称爬取
 
-    def craw(self):
+    def craw(self,idlist=[]):
         root='https://www.scopus.com/results/results.uri'
         ses=requests.session()#创建session
         #ses.proxies={'https':'http://127.0.0.1:1085'}
@@ -223,17 +223,35 @@ class WenxianSpiderMain(object):
         #fout.write(s2.text)
         soup2 = BeautifulSoup(s2.text, 'html.parser')
         atitles=soup2.find('div',id='authorlist').find_all('a',title='Show Author Details')
-        idlist=[]
+        
         spi=SpiderMain('a','b')#创建对象
         sum=0
         for atitle in atitles:
             authorId=re.findall(r'authorId=\w+&',atitle['href'])[0].replace('authorId=','').replace('&','')
-            idlist.append(authorId)
             sum+=1
-            print('第'+str(sum)+'作者')
-            spi.crawel(ses,authorId)#利用得到的authorid复用SpiderMain中的方法
+            if authorId not in idlist:
 
+                idlist.append(authorId)
+                
+                print('第'+str(sum)+'作者')
+                spi.crawel(ses,authorId)#利用得到的authorid复用SpiderMain中的方法
 
+class WenjianSpiderMain(object):
+    def __init__(self,f_in):
+        self.f_in=f_in
+        #self.f_out=f_out
+    def craw(self):
+        idlist=[]
+        lines = self.f_in.readlines()
+        print(lines)
+        for line in lines:
+            wenxian=line.rstrip('\n')
+            if wenxian=='':
+                continue
+            print(wenxian)
+            obj_spider=WenxianSpiderMain(wenxian)
+            obj_spider.craw(idlist)
+        
 
 
 
@@ -281,17 +299,35 @@ def wenxian_mode():
         exit()
     obj_spider=WenxianSpiderMain(wenxian)
     obj_spider.craw()
+    
+def wenjian_mode():
+    #通过读取分行写好需要爬的文献名，循环爬取审稿人信息，输出文档。
+    f_in=open('spider.txt','r')
+    #f_out=open('result.txt','w')
+    try:
+        #传入文件对象
+        #obj_spider=WenjianSpiderMain(f_in,f_out)
+        obj_spider=WenjianSpiderMain(f_in)
+        obj_spider.craw()
+    finally:
+        f_in.close()
+        #f_out.close()
+    
 
 if __name__=="__main__":
 
     while True:
         print()
-        print('编号1为人名模式，编号2为文献模式，输入exit退出')
+        print('编号1为人名模式，编号2为文献模式，编号3为文件模式，输入exit退出')
         flag=input('输入编号：').strip()
         if flag==str(1):
             zuozhe_mode()
         elif flag==str(2):
             wenxian_mode()
+        elif flag==str(3):
+            print('*************************')
+            print('读取spider.txt...')
+            wenjian_mode()
         elif flag=='exit':
             exit()
         else:
