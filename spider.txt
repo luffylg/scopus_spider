@@ -1,4 +1,24 @@
-Compaction quality assessment of earth-rock dam materials using roller-integrated compaction monitoring technology
-Real-Time Quality Monitoring and Control of Highway Compaction
-Compaction quality control of earth-rock dam construction using real-time field operation data
-
+Corrosion of steel reinforcement in concrete of different compressive strengths
+Influence of corrosion and cracking on bond behavior and strength of reinforced concrete members
+Modeling the effect of corrosion on bond strength at the steel–concrete interface with finite-element analysis
+Standard practice for preparing, cleaning, and evaluating corrosion test specimens, American Society for Testing and Materials.
+Bond properties of corroded reinforcement with and without confinement
+Analysis of reinforced concrete beams affected by reinforcement corrosion
+Corrosion of basaltic pumice, colemanite, barite and blast furnace slag coated rebars in concretes
+Influence of fly ash on corrosion resistance and chloride ion permeability of concrete
+Deterioration of concrete due to reinforcement steel corrosion
+Effect of rebar coating on corrosion resistance and bond strength of reinforced concrete
+Correction factor suggestion for ACI development length provisions based on flexural testing of RC slabs with various levels of corroded reinforcing bars
+Bond strength prediction for reinforced concrete members with highly corroded reinforcing bars
+Bond behaviour of corroded reinforcing steel bars in concrete
+Corrosion influence on bond in reinforced concrete
+Evaluation of the bond properties between concrete and reinforcement as a function of the degree of reinforcement corrosion
+Effects of corrosion on bond behavior between steel strand and concrete
+Effects of confinements on the bond strength between concrete and corroded steel bars
+Modelling the effect of corrosion on bond in reinforced concrete
+An experimental study on the bond strength between reinforcement bars and concrete as a function of concrete cover, strength and corrosion level
+Cover cracking model in reinforced concrete structures subject to rebar corrosion
+Calculation of corrosion rate for reinforced concrete beams based on corrosive crack width
+Development of the corrosion-filled paste and corrosion layer at the steel/concrete interface
+Shape of corrosion-induced cracks in recycled aggregate concrete
+Bond behaviour of normal/recycled concrete and corroded steel bars

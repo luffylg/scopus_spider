@@ -245,12 +245,17 @@ class WenjianSpiderMain(object):
         lines = self.f_in.readlines()
         print(lines)
         for line in lines:
-            wenxian=line.rstrip('\n')
-            if wenxian=='':
+            try:
+                wenxian=line.rstrip('\n')
+                if wenxian=='':
+                    continue
+                print(wenxian)
+                obj_spider=WenxianSpiderMain(wenxian)
+                obj_spider.craw(idlist)
+            except Exception as e:
                 continue
-            print(wenxian)
-            obj_spider=WenxianSpiderMain(wenxian)
-            obj_spider.craw(idlist)
+            finally:
+                print('\n\n\n\n')
         
 
 
