@@ -199,10 +199,13 @@ class WenxianSpiderMain(object):
             links=[]
             mark=0
             link=''
+            nameoffirst='if you see me, no result'
             for spans in span:
                 bianhao+=1
                 links.append(spans.a['href'])
                 biaoti=spans.a.text.strip().replace('\n','')
+                if bianhao==1:
+                    nameoffirst=bianhao #存下第一篇的标题，用于文件模式
 
                 #替换掉可能影响判断的字符
                 if biaoti.lower().replace(' ','').replace('.','').replace(',','').replace('-','')==self.wenxian.lower().replace(' ','').replace('.','').replace(',','').replace('-',''):
@@ -221,6 +224,7 @@ class WenxianSpiderMain(object):
                 if file_mode==False:
                     link=links[int(input('输入编号：'))-1]
                 else:
+                    print(nameoffirst)
                     link=links[0] #都不匹配时，文件模式默认选择第一个
         s2=ses.get(link)#进入文章页面
         #fout = open('output4.html', 'w',encoding="UTF-8")
