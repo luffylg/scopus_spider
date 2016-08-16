@@ -182,7 +182,7 @@ class WenxianSpiderMain(object):
 
     #输入文献名称爬取
 
-    def craw(self,idlist=[]):
+    def craw(self,idlist=[],file_mode=False):
         root='https://www.scopus.com/results/results.uri'
         ses=requests.session()#创建session
         #ses.proxies={'https':'http://127.0.0.1:1085'}
@@ -215,9 +215,13 @@ class WenxianSpiderMain(object):
                     kan=str(spans.parent.parent.find('div',class_='dataCol5').span.string).strip().replace('\n','')
                 else:
                     kan=spans.parent.parent.find('div',class_='dataCol5').span.a.text.strip().replace('\n','')
-                print('编号：'+str(bianhao)+' 标题：'+biaoti+' 作者：'+zuozhemen+' 年份：'+nian+' 出版刊物：'+kan)
+                if file_mode==False:
+                    print('编号：'+str(bianhao)+' 标题：'+biaoti+' 作者：'+zuozhemen+' 年份：'+nian+' 出版刊物：'+kan)
             if mark==0:
-                link=links[int(input('输入编号：'))-1]
+                if file_mode==False:
+                    link=links[int(input('输入编号：'))-1]
+                else:
+                    link=links[0] #都不匹配时，文件模式默认选择第一个
         s2=ses.get(link)#进入文章页面
         #fout = open('output4.html', 'w',encoding="UTF-8")
         #fout.write(s2.text)
@@ -243,7 +247,7 @@ class WenjianSpiderMain(object):
     def craw(self):
         idlist=[]
         lines = self.f_in.readlines()
-        print(lines)
+        #print(lines)
         for line in lines:
             try:
                 wenxian=line.rstrip('\n')
@@ -251,7 +255,7 @@ class WenjianSpiderMain(object):
                     continue
                 print(wenxian)
                 obj_spider=WenxianSpiderMain(wenxian)
-                obj_spider.craw(idlist)
+                obj_spider.craw(idlist,True)
             except Exception as e:
                 continue
             finally:
