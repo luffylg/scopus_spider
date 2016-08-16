@@ -56,7 +56,7 @@ class SpiderMain(object):
         else:
             self.crawel(ses,AuthorID)
 
-    def crawel(self,ses, AuthorID):
+    def crawel(self,ses, AuthorID,bianhao=0):
         s2=ses.get('https://www.scopus.com/authid/detail.uri',params={'authorId':AuthorID})# 获取作者详细信息页面
         message=self.parser.GetAuthorMessage(s2)#获取详细信息
         wenxin=message[0]
@@ -64,7 +64,7 @@ class SpiderMain(object):
         area=message[2]
         lishi=message[4]
         if int(wenxin)<10:#文献数少于10，直接返回
-            print('文献数为'+wenxin+'，不符合要求')
+            #print('文献数为'+wenxin+'，不符合要求')
             return
         # print('文献数：'+wenxin+' '+lishi)
         # print(AuthorName)
@@ -78,6 +78,8 @@ class SpiderMain(object):
             s4=ses.get(link)#获取文章详细信息页面
             emailnotparse,suoxie=self.parser.GetEmail(s4)#得到加密的邮件地址
             if emailnotparse!=None:
+                if bianhao!=0:
+                    print('第'+str(bianhao)+'作者')
                 print('文献数：'+wenxin+' '+lishi)
                 print(AuthorName)
                 print("缩写："+suoxie)
@@ -87,7 +89,7 @@ class SpiderMain(object):
                 #print('<a href=\''+email+'\'>'+email+'></a>')
                 print('年份: '+nian+'\n')
                 return
-        print("没找到邮箱")
+        #print("没找到邮箱")
 
 class WenxianSpiderMain(object):
     def __init__(self,wenxian):
@@ -241,8 +243,8 @@ class WenxianSpiderMain(object):
 
                 idlist.append(authorId)
                 
-                print('第'+str(sum)+'作者')
-                spi.crawel(ses,authorId)#利用得到的authorid复用SpiderMain中的方法
+                #print('第'+str(sum)+'作者')
+                spi.crawel(ses,authorId,sum)#利用得到的authorid复用SpiderMain中的方法
 
 class WenjianSpiderMain(object):
     def __init__(self,f_in):

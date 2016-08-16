@@ -1,20 +1,24 @@
-Fi-ber-reinforced polymer composites for construction- state-of-the-art review
-Close look at construction issues and performance of four fi-ber-reinforced polymer composite bridge decks
-Joining techniques for fiber rein-forced polymer composite bridge deck systems
-Determination of mode-I fracture toughness and non- uniformity for GFRP double cantilever beam specimens with an adhesive layer
-Energy release rates for the ENF specimen using a beam on an elastic foundation
-Mode II fracture tough-ness evaluation using four point bend, end notched flexure test
- Evaluation of the ac-curacy of the four-point bend end-notched flexure test for mode II delamination toughness determination
-Factors affecting the inter-laminar fracture energy of graphite/epoxy laminates
- On the analysis and design of the end notched flexure (ENF) speci-men for mode II testing
-Corrections for mode II frac-ture toughness specimens of composites materials
-Energy release rates for the ENF specimen using a beam on an elastic foundation
-A simplified beam analysis of the end notched flexure mode II delamination specimen
-Novel beam analysis of end notched flexure specimen for mode-II fracture
-Composite action and adhesive bond between fiber-reinforced polymer bridge decks and main girders
-Mode I and II fracture behavior of adhesively- bonded pultruded compo-site joints
- Composite Materials: Fa-tigue and Fracture (Third volume)
-Progressive crack growth analysis using interface element based on the virtual crack closure technique
-Standard test method for tensile properties of polymer matrix composite materials
-Standard ASTM D6272, Standard test method for flexural properties of unreinforced and reinforced plastics and electrical insulating materials by four-point bending
-Strain energy release rate calculation for a moving delamination front of arbitrary shape based on the virtual crack closure technique. Part I: Formula-tion and validation
+Ground Penetrating Radar
+Simulation of ground penetrating radar imaging under subsurface
+Advance Engineering Electromagnetics
+Civil Engineering Applications of Ground Penetrating Radar
+FDTD modelling in high-resolution 2D and 3D GPR surveys on a reinforced concrete column in a double wall of hollow bricks
+Computational Methods for Processing Ground Penetrating Radar Data
+Modelling ground penetrating radar by GprMax
+Simulation of direct wave propagation by numerical FDTD for a GPR-coupled antenna
+Finite-Difference Time-Domain Modeling of Ground-Penetrating Radar Antenna Systems
+Modélisation géoradar de la proche surface, estimation de la teneur en eau et influenced’un pollutant
+Optimising GPR modelling: A practical, multi-threaded approach to 3D FDTD numerical modeling
+Ground Penetrating Radar Data Processing, Modelling and Analysis, Ground Penetrating Radar Theory and Applications
+Contribution à l’analyse théorique et expérimentale de radargrammes GPR
+Modélisation de la propagation des ondes électromagnétiques en milieux hétérogènes Application au Radar Sol
+Effective modeling of ground penetrating radar in fractured media using analytic solutions for propagation, thin-bed interaction and dipolar scattering
+Ground penetrating radar: antenna frequencies and maximum probable depths of penetration in Quaternary sediments
+Evaluation of historical bridges through recreation of GPR models with the FDTD algorithm
+Analysis of GPR data: wave propagation velocity determination
+Modeling of GPR Wave Propagation and Scatteringin Inhomogeneous Media
+Experimental study of soil compaction effects on GPR signals
+The importance of including conductivity and dielectric permittivity information when processing low-frequency GPR and highfrequency EMI data sets
+Numerical modeling of ground-penetrating radar in 2-D using MATLAB
+Field observations and numerical models of GPR response from vertical pavement cracks
+The application of mathematical modelling in the interpretation of ground-penetrating radar data
