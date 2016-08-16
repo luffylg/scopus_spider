@@ -207,7 +207,7 @@ class WenxianSpiderMain(object):
                 links.append(spans.a['href'])
                 biaoti=spans.a.text.strip().replace('\n','')
                 if bianhao==1:
-                    nameoffirst=bianhao #存下第一篇的标题，用于文件模式
+                    nameoffirst=biaoti #存下第一篇的标题，用于文件模式
 
                 #替换掉可能影响判断的字符
                 if biaoti.lower().replace(' ','').replace('.','').replace(',','').replace('-','')==self.wenxian.lower().replace(' ','').replace('.','').replace(',','').replace('-',''):
