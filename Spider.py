@@ -263,6 +263,7 @@ class WenjianSpiderMain(object):
                 obj_spider=WenxianSpiderMain(wenxian)
                 obj_spider.craw(idlist,True)
             except Exception as e:
+                print('出现error')
                 continue
             finally:
                 print('\n\n\n\n')
@@ -317,7 +318,7 @@ def wenxian_mode():
     
 def wenjian_mode():
     #通过读取分行写好需要爬的文献名，循环爬取审稿人信息，输出文档。
-    f_in=open('spider.txt','r')
+    f_in=open('spider.txt','r',encoding= 'utf-8') #不加encoding会出现UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position
     #f_out=open('result.txt','w')
     try:
         #传入文件对象
