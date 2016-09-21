@@ -11,15 +11,24 @@ def parser(title,method):
         re.sub(r'\[[A-Z]\].+]','',title)
         return title
     def parser2(title):
-        # name... 2000(a)***. 或， Journal name***
-        pattern1=re.compile(r'.+\s(\d{4}|\d{4}a|\d{4}b)(\.|:)')
-        pattern2=re.compile(r'((\.\s)|(,\s[A-Z\d])).+$')
+        # name... (2000). 或2000(a)***. 或， Journal name***
+        pattern1=re.compile(r'.+(,\s|,|\.\s)(\d{4}|\d{4}a|\d{4}b|Year|\(\d{4}\))(\.|:)')
+        pattern2=re.compile(r'((\[[A-Z]\]\.)|(\.\s)|(,\s[A-Z\d])).+$')
         a=re.sub(pattern1,'',title,1)
         c=re.sub(pattern2,'',a,1)
         # st=re.findall(pattern1,title)[0]
         # title=title.replace(st,'')
         return c
-    operator = {'1':parser1,'2':parser2}
+    def parser3(title):
+        # ***“name”***
+        pattern1=re.compile(r'.+\s“')
+        pattern2=re.compile(r',”.+')
+        a=re.sub(pattern1,'',title,1)
+        c=re.sub(pattern2,'',a,1)
+        # st=re.findall(pattern1,title)[0]
+        # title=title.replace(st,'')
+        return c
+    operator = {'1':parser1,'2':parser2,'3':parser3}
     hh=operator.get(method)(title)
 
 
