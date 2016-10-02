@@ -28,7 +28,16 @@ def parser(title,method):
         # st=re.findall(pattern1,title)[0]
         # title=title.replace(st,'')
         return c
-    operator = {'1':parser1,'2':parser2,'3':parser3}
+    def parser4(title):
+        # ***“name”***
+        pattern1=re.compile(r'.+\.:')
+        pattern2=re.compile(r'\..+')
+        a=re.sub(pattern1,'',title,1)
+        c=re.sub(pattern2,'',a,1)
+        # st=re.findall(pattern1,title)[0]
+        # title=title.replace(st,'')
+        return c
+    operator = {'1':parser1,'2':parser2,'3':parser3,'4':parser4}
     hh=operator.get(method)(title)
 
 
@@ -39,7 +48,7 @@ titles=open('spider.txt','r',encoding='utf-8').readlines()
 a=''
 for title in titles:
     #rstrip() 删除 string 字符串末尾的指定字符
-    print(parser(title.rstrip('\n'),'2'))
+    print(parser(title.rstrip('\n'),'4'))
 # for title in titles:
 #     a+=title.replace('\n','')
 # a.replace('\n','')

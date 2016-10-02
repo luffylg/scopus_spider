@@ -63,9 +63,12 @@ class SpiderMain(object):
         AuthorName=message[1]
         area=message[2]
         lishi=message[4]
+        email=''
+        suoxie=''
+        nian=''
         if int(wenxin)<10:#文献数少于10，直接返回
             #print('文献数为'+wenxin+'，不符合要求')
-            return
+            return AuthorName,area,lishi,email,suoxie,nian,wenxin
         # print('文献数：'+wenxin+' '+lishi)
         # print(AuthorName)
         # print(area)
@@ -88,7 +91,8 @@ class SpiderMain(object):
                 print(email)
                 #print('<a href=\''+email+'\'>'+email+'></a>')
                 print('年份: '+nian+'\n')
-                return
+                return AuthorName,area,lishi,email,suoxie,nian,wenxin
+        return AuthorName,area,lishi,email,suoxie,nian,wenxin
         #print("没找到邮箱")
 
 class WenxianSpiderMain(object):
@@ -184,7 +188,7 @@ class WenxianSpiderMain(object):
 
     #输入文献名称爬取
 
-    def craw(self,idlist=[],file_mode=False):
+    def craw(self,idlist=[],file_mode=False,file_mode2=False):
         root='https://www.scopus.com/results/results.uri'
         ses=requests.session()#创建session
         #ses.proxies={'https':'http://127.0.0.1:1085'}
@@ -220,10 +224,10 @@ class WenxianSpiderMain(object):
                     kan=str(spans.parent.parent.find('div',class_='dataCol5').span.string).strip().replace('\n','')
                 else:
                     kan=spans.parent.parent.find('div',class_='dataCol5').span.a.text.strip().replace('\n','')
-                if file_mode==False:
+                if not file_mode:
                     print('编号：'+str(bianhao)+' 标题：'+biaoti+' 作者：'+zuozhemen+' 年份：'+nian+' 出版刊物：'+kan)
             if mark==0:
-                if file_mode==False:
+                if not file_mode:
                     link=links[int(input('输入编号：'))-1]
                 else:
                     print(nameoffirst)
@@ -236,6 +240,7 @@ class WenxianSpiderMain(object):
         
         spi=SpiderMain('a','b')#创建对象
         sum=0
+        authors=[]
         for atitle in atitles:
             authorId=re.findall(r'authorId=\w+&',atitle['href'])[0].replace('authorId=','').replace('&','')
             sum+=1
@@ -244,7 +249,26 @@ class WenxianSpiderMain(object):
                 idlist.append(authorId)
                 
                 #print('第'+str(sum)+'作者')
-                spi.crawel(ses,authorId,sum)#利用得到的authorid复用SpiderMain中的方法
+                if file_mode2:
+                    author={}
+                    AuthorName,area,lishi,email,suoxie,nian,wenxin=spi.crawel(ses,authorId,sum)
+                    if email=='':
+                        break
+                    author["AuthorName"]=AuthorName
+                    author["area"]=area
+                    author["lishi"]=lishi
+                    author["email"]=email
+                    author["suoxie"]=suoxie
+                    author["nian"]=nian
+                    author["wenxin"]=wenxin
+                    authors.append(author)
+                else:
+                    spi.crawel(ses,authorId,sum)#利用得到的authorid复用SpiderMain中的方法
+        return authors
+
+
+
+
 
 class WenjianSpiderMain(object):
     def __init__(self,f_in):
@@ -269,7 +293,29 @@ class WenjianSpiderMain(object):
                 print('\n\n\n\n')
         
 
-
+class WenjianSpiderMain2(object):
+    def __init__(self,f_in):
+        self.f_in=f_in
+        #self.f_out=f_out
+    def craw(self):
+        authors=[]
+        idlist=[]
+        lines = self.f_in.readlines()
+        #print(lines)
+        for line in lines:
+            try:
+                wenxian=line.rstrip('\n')
+                if wenxian=='':
+                    continue
+                print(wenxian)
+                obj_spider=WenxianSpiderMain(wenxian)
+                authors+=obj_spider.craw(idlist,True,True)
+            except Exception as e:
+                print('出现error')
+                continue
+            finally:
+                print('\n\n\n\n')
+        return authors
 
 
 
@@ -289,6 +335,7 @@ def strip_email_protection(s):
     #parse email
     fp = fp[0].replace('email-protection#','')
     # print(fp)
+
     r = int(fp[:2], 16)
     email = ''.join([chr(int(fp[i:i+2], 16) ^ r) for i in range(2, len(fp), 2)])
     # m = re.sub(r'<a class="__cf_email__".*?</a>', email, s)
@@ -328,13 +375,30 @@ def wenjian_mode():
     finally:
         f_in.close()
         #f_out.close()
-    
+
+
+
+def wenjian_mode2():
+    f_in=open('spider.txt','r',encoding= 'utf-8')
+
+    try:
+        #传入文件对象
+        #obj_spider=WenjianSpiderMain(f_in,f_out)
+        obj_spider2=WenjianSpiderMain2(f_in)
+        authors=obj_spider2.craw()
+
+        # 以文献数大小排序
+        authors=sorted(authors,key=lambda author: int(author["wenxin"]),reverse=True)
+    finally:
+        f_in.close()
+        return authors
+
 
 if __name__=="__main__":
 
     while True:
         print()
-        print('编号1为人名模式，编号2为文献模式，编号3为文件模式，输入exit退出')
+        print('编号1为人名模式，编号2为文献模式，编号3为文件模式，编号4为按发表数排列输出的文件模式，输入exit退出')
         flag=input('输入编号：').strip()
         if flag==str(1):
             zuozhe_mode()
@@ -344,6 +408,20 @@ if __name__=="__main__":
             print('*************************')
             print('读取spider.txt...')
             wenjian_mode()
+        elif flag==str(4):
+            print('*************************')
+            print('读取spider.txt...')
+            authors=wenjian_mode2()
+            print("\n\n\n\n排序后")
+            for author in authors:
+                print('文献数：'+author["wenxin"]+' '+author['lishi'])
+                print(author['AuthorName'])
+                print("缩写："+author['suoxie'])
+                print(author['area'])
+                print(author['email'])
+                #print('<a href=\''+email+'\'>'+email+'></a>')
+                print('年份: '+author['nian']+'\n')
+                print('\n\n')
         elif flag=='exit':
             exit()
         else:
