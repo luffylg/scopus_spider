@@ -48,7 +48,7 @@ class SpiderMain(object):
         root='https://www.scopus.com/results/authorNamesList.uri'
         ses=requests.session()#创建session
         #ses.proxies={'https':'http://127.0.0.1:1085'}#代理
-        s=ses.get(root,params=self.param)#搜索得到作者列表页面
+        s=ses.get(root,params=self.param,timeout=60)#搜索得到作者列表页面
         AuthorID=self.parser.GetAuthorId(s)#获取authorid
         if(AuthorID==False):
             return
