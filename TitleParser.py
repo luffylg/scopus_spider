@@ -7,9 +7,9 @@ def parser(title,method):
     nima=title
     def parser1(title):
         # [1]name, name2, et al. 或name, name2. ***[J]***
-        re.sub(r'^\[\d+\].+(et\sal\.|\.)','',title)
-        re.sub(r'\[[A-Z]\].+]','',title)
-        return title
+        a=re.sub(r'[^\.]+\.','',title,1)
+        b=re.sub(r'\[[A-Z]\].+','',a)
+        return b
     def parser2(title):
         # name... (2000). 或2000(a)***. 或， Journal name***
         pattern1=re.compile(r'.+(,\s|,|\.\s)(\d{4}|\d{4}a|\d{4}b|Year|\(\d{4}\))(\.|:)')
@@ -46,9 +46,14 @@ def parser(title,method):
 
 titles=open('spider.txt','r',encoding='utf-8').readlines()
 a=''
+i=0
 for title in titles:
+    # i+=1
+    # if i%2==0:
+    #     continue
     #rstrip() 删除 string 字符串末尾的指定字符
-    print(parser(title.rstrip('\n'),'4'))
+    print(parser(title.rstrip('\n'),'2'))
+
 # for title in titles:
 #     a+=title.replace('\n','')
 # a.replace('\n','')
