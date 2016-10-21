@@ -73,12 +73,12 @@ class SpiderMain(object):
         # print(AuthorName)
         # print(area)
         Articlelink=message[3]#获取作者所有文章页面链接
-        s3=ses.get(Articlelink)#获取作者所有文章页面
+        s3=ses.get(Articlelink,timeout=60)#获取作者所有文章页面
         Articles=self.parser.GetArticles(s3)#获得所有文章链接及年份列表
         for lists in Articles:
             link=lists[0]
             nian=lists[1]
-            s4=ses.get(link)#获取文章详细信息页面
+            s4=ses.get(link,timeout=60)#获取文章详细信息页面
             emailnotparse,suoxie=self.parser.GetEmail(s4)#得到加密的邮件地址
             if emailnotparse!=None:
                 if bianhao!=0:
@@ -192,7 +192,7 @@ class WenxianSpiderMain(object):
         root='https://www.scopus.com/results/results.uri'
         ses=requests.session()#创建session
         #ses.proxies={'https':'http://127.0.0.1:1085'}
-        s=ses.get(root,params=self.param2)#搜索得到文献列表页面
+        s=ses.get(root,params=self.param2,timeout=60)#搜索得到文献列表页面
         soup = BeautifulSoup(s.text, 'html.parser')
         span=soup.find_all('span',class_='docTitle')
         if len(span)==0:
