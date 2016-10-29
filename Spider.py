@@ -253,7 +253,7 @@ class WenxianSpiderMain(object):
                     author={}
                     AuthorName,area,lishi,email,suoxie,nian,wenxin=spi.crawel(ses,authorId,sum)
                     if email=='':
-                        break
+                        continue
                     author["AuthorName"]=AuthorName
                     author["area"]=area
                     author["lishi"]=lishi
@@ -266,7 +266,155 @@ class WenxianSpiderMain(object):
                     spi.crawel(ses,authorId,sum)#利用得到的authorid复用SpiderMain中的方法
         return authors
 
+class wenxianSpiderMain2(object):
+    def __init__(self,wenxian):
+        self.downloader = html_downloader.HtmlDownloader()
+        self.parser = html_parser.HtmlParser()
+        self.outputer = html_outputer.HtmlOutputer()
+        self.wenxian=wenxian
+        self.wenxianparse=self.wenxian.replace(' ','+')
+        self.param={
+            'numberOfFields':'0',
+            'src':'s',
+            'clickedLink':'',
+            'edit':'',
+            'editSaveSearch':'',
+            'origin':'searchbasic',
+            'authorTab':'',
+            'affiliationTab':'',
+            'advancedTab':'',
+            'scint':'1',
+            'menu':'search',
+            'tablin':'',
+            'searchterm1':self.wenxianparse,
+            'field1':'TITLE_ABS_KEY',
+            'dateType':'Publication_Date_Type',
+            'yearFrom':'Before+1960',
+            'yearTo':'Present',
+            'loadDate':'7',
+            'documenttype':'All',
+            'subjects':'LFSC',
+            '_subjects':'on',
+            'subjects':'HLSC',
+            '_subjects':'on',
+            'subjects':'PHSC',
+            '_subjects':'on',
+            'subjects':'SOSC',
+            '_subjects':'on',
+            'st1':self.wenxianparse,
+            'st2':'',
+            'sot':'b',
+            'sdt':'b',
+            'sl':'101',
+            's':'TITLE-ABS-KEY%28'+self.wenxianparse+'%29',
+            #'sid':0D8A156F36B35369FE6B68BAAA111169.N5T5nM1aaTEF8rE6yKCR3A%3A150
+            #searchId:0D8A156F36B35369FE6B68BAAA111169.N5T5nM1aaTEF8rE6yKCR3A%3A150
+            #txGid:0D8A156F36B35369FE6B68BAAA111169.N5T5nM1aaTEF8rE6yKCR3A%3A15
+            'sort':'plf-f',
+            'originationType':'b',
+            'rr':''
+        }
 
+        self.param2={
+            'numberOfFields':'0',
+            'src':'s',
+            'clickedLink':'',
+            'edit':'',
+            'editSaveSearch':'',
+            'origin':'searchbasic',
+            'authorTab':'',
+            'affiliationTab':'',
+            'advancedTab':'',
+            'scint':'1',
+            'menu':'search',
+            'tablin':'',
+            'searchterm1':self.wenxian,
+            'field1':'TITLE_ABS_KEY',
+            'dateType':'Publication_Date_Type',
+            'yearFrom':'Before 1960',
+            'yearTo':'Present',
+            'loadDate':'7',
+            'documenttype':'All',
+            'authSubject':'LFSC',
+           '_authSubject':'on',
+           'authSubject':'HLSC',
+            '_authSubject':'on',
+            'authSubject':'PHSC',
+            '_authSubject':'on',
+            'authSubject':'SOSC',
+            '_authSubject':'on',
+            'st1':self.wenxian,
+            'st2':'',
+            'sot':'b',
+            'sdt':'b',
+            'sl':'101',
+            's':'TITLE-ABS-KEY({0})'.format(self.wenxian),
+            # sid:558EDC31DD2FC5442E4523A31F75350C.N5T5nM1aaTEF8rE6yKCR3A:70
+            # searchId:558EDC31DD2FC5442E4523A31F75350C.N5T5nM1aaTEF8rE6yKCR3A:70
+            # txGid:558EDC31DD2FC5442E4523A31F75350C.N5T5nM1aaTEF8rE6yKCR3A:7
+            'sort':'plf-f',
+            'originationType':'b',
+            'rr':''
+        }
+    def craw(self,idlist=[],file_mode2=False):
+        root='https://www.scopus.com/results/results.uri'
+        ses=requests.session()#创建session
+        #ses.proxies={'https':'http://127.0.0.1:1085'}
+        s=ses.get(root,params=self.param2,timeout=60)#搜索得到文献列表页面
+        soup = BeautifulSoup(s.text, 'html.parser')
+        span=soup.find_all('span',class_='docTitle')
+        if len(span)==0:
+            print("找不到文献")
+            return
+        else:
+            bianhao=0
+            mark=0
+            nameoffirst='if you see me, no result'
+            authors=[]
+            for spans in span:
+                try:
+                    bianhao+=1
+                    link=spans.a['href']
+                    biaoti=spans.a.text.strip().replace('\n','')
+
+                    zuozhemen=spans.parent.parent.find('div',class_='dataCol3').span.text.strip().replace('\n','')
+                    nian=spans.parent.parent.find('div',class_='dataCol4').span.text.strip().replace('\n','')
+                    if spans.parent.parent.find('div',class_='dataCol5').span.a is None:
+                        kan=str(spans.parent.parent.find('div',class_='dataCol5').span.string).strip().replace('\n','')
+                    else:
+                        kan=spans.parent.parent.find('div',class_='dataCol5').span.a.text.strip().replace('\n','')
+                    print(biaoti)
+                    s2=ses.get(link)#进入文章页面
+                    soup2 = BeautifulSoup(s2.text, 'html.parser')
+                    atitles=soup2.find('div',id='authorlist').find_all('a',title='Show Author Details')
+
+                    spi=SpiderMain('a','b')#创建对象
+                    sum=0
+
+                    for atitle in atitles:
+                        authorId=re.findall(r'authorId=\w+&',atitle['href'])[0].replace('authorId=','').replace('&','')
+                        sum+=1
+                        if authorId not in idlist:
+                            idlist.append(authorId)
+                            #print('第'+str(sum)+'作者')
+                            author={}
+                            AuthorName,area,lishi,email,suoxie,nian,wenxin=spi.crawel(ses,authorId,sum)
+                            if email=='':
+                                continue
+                            author["AuthorName"]=AuthorName
+                            author["area"]=area
+                            author["lishi"]=lishi
+                            author["email"]=email
+                            author["suoxie"]=suoxie
+                            author["nian"]=nian
+                            author["wenxin"]=wenxin
+                            authors.append(author)
+                except Exception as e:
+                    print('出现error')
+                    continue
+                finally:
+                    print('\n\n\n\n')
+        return sorted(authors,key=lambda author: int(author["wenxin"]),reverse=True)
 
 
 
@@ -394,11 +542,20 @@ def wenjian_mode2():
         return authors
 
 
+def wenxian_mode2():
+    wenxian=input('文献模糊标题：').strip()
+    if wenxian=='exit':
+        exit()
+    obj_spider=wenxianSpiderMain2(wenxian)
+    authors=obj_spider.craw()
+    return authors
+
+
 if __name__=="__main__":
 
     while True:
         print()
-        print('编号1为人名模式，编号2为文献模式，编号3为文件模式，编号4为按发表数排列输出的文件模式，输入exit退出')
+        print('编号1为人名模式，编号2为文献模式，编号3为文件模式，编号4为按发表数排列输出的文件模式，编号5为模糊文献模式，输入exit退出')
         flag=input('输入编号：').strip()
         if flag==str(1):
             zuozhe_mode()
@@ -412,6 +569,18 @@ if __name__=="__main__":
             print('*************************')
             print('读取spider.txt...')
             authors=wenjian_mode2()
+            print("\n\n\n\n排序后")
+            for author in authors:
+                print('文献数：'+author["wenxin"]+' '+author['lishi'])
+                print(author['AuthorName'])
+                print("缩写："+author['suoxie'])
+                print(author['area'])
+                print(author['email'])
+                #print('<a href=\''+email+'\'>'+email+'></a>')
+                print('年份: '+author['nian']+'\n')
+                print('\n\n')
+        elif flag==str(5):
+            authors=wenxian_mode2()
             print("\n\n\n\n排序后")
             for author in authors:
                 print('文献数：'+author["wenxin"]+' '+author['lishi'])
