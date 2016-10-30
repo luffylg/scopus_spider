@@ -435,7 +435,8 @@ class WenjianSpiderMain(object):
                 obj_spider=WenxianSpiderMain(wenxian)
                 obj_spider.craw(idlist,True)
             except Exception as e:
-                print('出现error')
+                print('出现error ',end='')
+                print(e)
                 continue
             finally:
                 print('\n\n\n\n')
@@ -459,7 +460,8 @@ class WenjianSpiderMain2(object):
                 obj_spider=WenxianSpiderMain(wenxian)
                 authors+=obj_spider.craw(idlist,True,True)
             except Exception as e:
-                print('出现error')
+                print('出现error ',end='')
+                print(e)
                 continue
             finally:
                 print('\n\n\n\n')
