@@ -12,7 +12,7 @@ def parser(title,method):
         return b
     def parser2(title):
         # name... (2000). 或2000(a)***. 或， Journal name***
-        pattern1=re.compile(r'.+(,\s|,|\.\s)(\d{4}|\d{4}a|\d{4}b|Year|\(\d{4}\))(\.|:)')
+        pattern1=re.compile(r'.+(,\s|,|\.\s)(\d{4}|\d{4}a|\d{4}b|\d{4}c|Year|\(\d{4}\))(\.|:|,)')
         pattern2=re.compile(r'((\[[A-Z]\]\.)|(\.\s)|(,\s[A-Z\d])|(\s\s)).+$')
         a=re.sub(pattern1,'',title,1)
         c=re.sub(pattern2,'',a,1)
