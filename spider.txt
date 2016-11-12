@@ -1,24 +1,103 @@
-Ground Penetrating Radar
-Simulation of ground penetrating radar imaging under subsurface
-Advance Engineering Electromagnetics
-Civil Engineering Applications of Ground Penetrating Radar
-FDTD modelling in high-resolution 2D and 3D GPR surveys on a reinforced concrete column in a double wall of hollow bricks
-Computational Methods for Processing Ground Penetrating Radar Data
-Modelling ground penetrating radar by GprMax
-Simulation of direct wave propagation by numerical FDTD for a GPR-coupled antenna
-Finite-Difference Time-Domain Modeling of Ground-Penetrating Radar Antenna Systems
-Modélisation géoradar de la proche surface, estimation de la teneur en eau et influenced’un pollutant
-Optimising GPR modelling: A practical, multi-threaded approach to 3D FDTD numerical modeling
-Ground Penetrating Radar Data Processing, Modelling and Analysis, Ground Penetrating Radar Theory and Applications
-Contribution à l’analyse théorique et expérimentale de radargrammes GPR
-Modélisation de la propagation des ondes électromagnétiques en milieux hétérogènes Application au Radar Sol
-Effective modeling of ground penetrating radar in fractured media using analytic solutions for propagation, thin-bed interaction and dipolar scattering
-Ground penetrating radar: antenna frequencies and maximum probable depths of penetration in Quaternary sediments
-Evaluation of historical bridges through recreation of GPR models with the FDTD algorithm
-Analysis of GPR data: wave propagation velocity determination
-Modeling of GPR Wave Propagation and Scatteringin Inhomogeneous Media
-Experimental study of soil compaction effects on GPR signals
-The importance of including conductivity and dielectric permittivity information when processing low-frequency GPR and highfrequency EMI data sets
-Numerical modeling of ground-penetrating radar in 2-D using MATLAB
-Field observations and numerical models of GPR response from vertical pavement cracks
-The application of mathematical modelling in the interpretation of ground-penetrating radar data
+A simple dry friction model for metal forming process
+
+ A friction model for dry contacts during metal forming processes
+
+ A numerical study on three–dimensional conjugate heat transfer of natural convection and conduction in a differentially heated cubic enclosure with a heat–generating cubic conducting body
+
+ Gap conductance in contact heat transfer
+
+ A three-dimensional thermal–mechanical asperity contact model for two nominally flat surfaces in contact
+
+ Thermal Transport Mechanisms at Nanoscale Point Contacts
+
+ Prediction of thermal contact conductance based on the statistics of the roughness profile characteristics
+
+ Determination of thermal contact resistance from transient temperature measurements
+
+ Influence of the inaccuracy of thermal contact conductance coefficient on the weighted–mean temperature calculated for a forged blank
+
+ Investigation of heat transfer in the press hardening process
+
+ A model of thermal contact conductance at high real contact area fractions
+
+ Prediction of contact surface temperature between rough sliding bodies–numerical analysis and experiments
+
+ Determination of heat and thermal distortion in braking systems
+
+ Determination of temperatures for sliding contact with applications for braking systems
+
+ Thermomechanical analysis of elastoplastic bodies in a sliding spherical contact and the effects of sliding speed, heat partition, and thermal softening
+
+ An analysis of elasto-plastic sliding spherical asperity interaction
+
+ An elastic–plastic asperity interaction model for sliding friction
+
+ Theoretical and experimental study of a thermal contact conductance model for elastic, elastoplastic and plastic deformation of rough surfaces
+
+ Modeling thermal contact resistance: a scale analysis approach
+
+ Thermal contact resistance of nonconforming rough surfaces, part 2: thermal model
+
+ Microscopic and macroscopic thermal contact resistances of pressed mechanical contacts
+
+ A simplified elliptic model of rough surface contact
+
+ Plastic deformation and contact area of an elastic–plastic contact of ellipsoid bodies after unloading
+
+ An elliptical elastic-plastic microcontact model developed for an ellipsoid in contact with a smooth rigid flat
+
+ An elastic–plastic contact model of ellipsoid bodies
+
+ Elasticplastic contact model for rough surfaces based on plastic asperity concept
+
+ On elastic interaction of nomfinally flat rough surfaces
+
+ Closed-form equations for three dimensional clastirplastic contact of nominally flat rough surfaces
+
+ A load dependent friction model for fully plastic contact conditions
+
+ Multi-scale friction modelling for rough contacts under sliding conditions
+
+ An experimental and theoretical investigation of ploughing, cutting and wedge formation during abrasive wear
+
+ An explanation of the different regimes of friction and wear using asperity deformation models
+
+ Plastic deformation of a metal surface in sliding contact with a hard wedge: its relation to friction and wear
+
+ Contact Mechanics
+
+ An experimentally validated thermo-mechanical model for the prediction of thermal contact conductance
+
+ An Elastic-Plastic Model for the Contact of Rough Surfaces
+
+ Elastic-Plastic Contact Analysis of a Sphere and a Rigid Flat
+
+ The Hardness of Metals
+
+ Diffusion wear of cemented carbide tools when cutting steel at high speeds
+
+ High temperature microhardness profiles of hard CVD coatings
+
+ Static Friction Coefficient Model for Metallic Rough Surfaces
+
+ An experimental investigation of thermal contact conductance of stainless steel at low temperatures
+
+ Thermal contact conductance theoretical considerations
+
+ Thermal contact conductance
+
+ Elastic-Plastic Contact Analysis of a Sphere and a Rigid Flat
+
+ An elastoplastic microasperity contact model for metallic materials
+
+ Junction growth in metallic friction: the role of combined stresses and surface contamination
+
+ An analysis of the forging processes for 6061 aluminum-alloy wheels
+
+ Computer modeling of the continuous forming extrusion Proeess of AA6061 alloy
+
+ Recommended Values of Thermophysical Properties for Selected Commercial Alloys
+
+ Finite element simulation of warm deep drawing of aluminum alloy sheet when accounting for heat conduction
+
+ Numerical investigations on springback characteristics of aluminum sheet metal alloys in warm forming conditions
