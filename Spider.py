@@ -90,7 +90,9 @@ class SpiderMain(object):
                 print(AuthorName)
                 print("缩写："+suoxie)
                 print(area)
-                email=strip_email_protection(emailnotparse['href'])
+                email=emailnotparse.get('href').replace('mailto:','').strip()
+                # 网站变动，不需要解析邮件，可以直接获取
+                # email=strip_email_protection(emailnotparse['title'])
                 print(email)
                 #print('<a href=\''+email+'\'>'+email+'></a>')
                 print('年份: '+nian+'\n')
