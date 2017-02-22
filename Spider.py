@@ -92,7 +92,8 @@ class SpiderMain(object):
                 print(area)
                 email=emailnotparse.get('href').replace('mailto:','').strip()
                 # 网站变动，不需要解析邮件，可以直接获取
-                # email=strip_email_protection(emailnotparse['title'])
+                if 'email-protection' in email:
+                    email=strip_email_protection(emailnotparse['href'])
                 print(email)
                 #print('<a href=\''+email+'\'>'+email+'></a>')
                 print('年份: '+nian+'\n')
