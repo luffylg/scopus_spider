@@ -227,6 +227,8 @@ class WenxianSpiderMain(object):
                     mark=1
                     link=spans.a['href']
                     break
+                if file_mode:
+                    continue
                 zuozhemen=spans.parent.parent.find('div',class_='dataCol3').span.text.strip().replace('\n','')
                 nian=spans.parent.parent.find('div',class_='dataCol4').span.text.strip().replace('\n','')
                 if spans.parent.parent.find('div',class_='dataCol5').span.a is None:

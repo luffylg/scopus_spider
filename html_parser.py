@@ -62,7 +62,9 @@ class HtmlParser(object):
         for article in spanarticle:
             linka=article.a['href']
             #得到年份
-            nian=article.parent.parent.find('div',class_='dataCol4').span.text.replace('\n','')
+            #节点变动
+            nian=article.parent.parent.find_all('td')[2].text.replace('\n','')
+            # nian=article.parent.parent.find('div',class_='dataCol4').span.text.replace('\n','')
             list.append([linka,nian])
         return list
 
